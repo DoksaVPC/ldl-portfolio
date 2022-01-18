@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 6rem;
+  background-color: rgb(242, 250, 255);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.05);
+
+  z-index: 999;
+
+  &__logo-box {
+    width: 3.2rem;
+  }
+
+  &__list-item {
+    display: inline-block;
+    &:not(&:last-child) {
+      padding-right: 4rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    &:link,
+    &:visited {
+      color: black;
+    }
+  }
+}

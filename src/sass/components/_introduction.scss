@@ -1,0 +1,34 @@
+.introduction {
+  display: flex;
+  justify-content: flex-end;
+  //@include respond(tab-port) {
+  //justify-content: flex-start;
+  //}
+
+  &__text {
+    flex: 0 0 calc((100% - #{$gutter-width}) / 2);
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+
+    @include respond(tab-port) {
+      flex: 0 0 calc(2 * (100% - 2 * #{$gutter-width}) / 3 + #{$gutter-width});
+    }
+
+    @include respond(phone) {
+      flex: 1;
+    }
+  }
+
+  &__paragraph {
+    color: rgb(10, 15, 20);
+
+    strong {
+      font-weight: 700;
+      color: $color-primary;
+    }
+
+    &:first-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

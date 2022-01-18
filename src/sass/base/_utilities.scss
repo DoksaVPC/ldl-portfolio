@@ -1,0 +1,83 @@
+.u_margin-top-xs {
+  margin-top: 0.8rem;
+}
+
+.u_margin-top-s {
+  margin-top: 1.6rem;
+}
+
+.u_margin-top-m {
+  margin-top: 2.4rem;
+}
+
+.u_margin-top-l {
+  margin-top: 5rem;
+}
+
+.u_margin-top-xl {
+  margin-top: 8rem;
+}
+
+.u_margin-bottom-xs {
+  margin-bottom: 0.8rem;
+}
+
+.u_margin-bottom-s {
+  margin-bottom: 1.6rem;
+}
+
+.u_margin-bottom-m {
+  margin-bottom: 2.4rem;
+}
+
+.u_margin-bottom-l {
+  margin-bottom: 5rem;
+}
+
+.u_margin-bottom-xl {
+  margin-bottom: 8rem;
+}
+
+.u_margin-bottom-xxl {
+  margin-bottom: 10rem;
+}
+
+.u_show-on-mobile {
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.u_show-on-desktop {
+  display: block;
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.u_show-on-desktop--inline {
+  display: inline;
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.u_show-on-tab {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.u_hide-on-tab--inline {
+  display: inline;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}

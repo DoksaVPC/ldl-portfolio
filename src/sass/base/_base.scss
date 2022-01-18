@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Taviraj:wght@300;400;500;600;700&display=swap");
+
+//set border-box and remove defalt margins and paddings on all elements
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//setting the root font size to 10px
+html {
+  font-size: 62.5%;
+
+  @include respond(small-desktop) {
+    font-size: 58%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 54%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 52%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+
+  @include respond(phone-small) {
+    font-size: 48%;
+  }
+}
+
+//remove default text decoration on links
+a {
+  text-decoration: none;
+}
+
+//remove default styles to lists
+ol,
+ul {
+  list-style: none;
+}
+
+//prevent media elements from exceding container size
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+//input elements inherit font properties
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//set base background color
+html {
+  background: linear-gradient(
+    to bottom right,
+    $color-background,
+    rgb(183, 203, 221)
+  );
+
+  color: $color-primary;
+}
