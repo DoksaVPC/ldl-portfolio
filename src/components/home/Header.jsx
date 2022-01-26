@@ -1,7 +1,10 @@
+import Canvas from './canvas/Canvas';
+
 function Header() {
     return (
     <>
     <div className="header__container">
+    <Canvas />
     <div className="container">
       <header className="header">
         <h1 className="heading-primary">

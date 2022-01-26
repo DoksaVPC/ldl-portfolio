@@ -54,6 +54,12 @@ svg {
   max-width: 100%;
 }
 
+//set canvas position to absolute to display content on top of it
+canvas {
+  position: absolute;
+  opacity: 0.85;
+}
+
 //input elements inherit font properties
 input,
 button,
@@ -62,13 +68,22 @@ select {
   font: inherit;
 }
 
-//set base background color
+//set base text color and background to transparent
 html {
+  color: $color-primary;
+}
+
+//create a fixed gradient background
+body::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   background: linear-gradient(
     to bottom right,
     $color-background,
-    rgb(183, 203, 221)
+    rgba($color-accent-light, 0.25)
   );
-
-  color: $color-primary;
+  z-index: -1000;
 }

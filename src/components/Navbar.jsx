@@ -1,4 +1,4 @@
-import Logo from '../assets/img/ldl-logo.png';
+import Logo from '../assets/img/ldl-logo.svg';
 
 function Navbar() {
     return (

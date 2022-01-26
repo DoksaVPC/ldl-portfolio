@@ -1,9 +1,9 @@
-function ProjectsItem( {name, image, text, tags} ) {
+function ProjectsItem( {name, image, text, tags, handleHover} ) {
     return (
         <div className="project">
             <div className="flex-column">
                 <h4 className="project__name u_show-on-mobile">{name}</h4>
-                <div className="project__image-box">
+                <div className="project__image-box" onMouseEnter={() => handleHover(true)} onMouseOut={() => handleHover(false)}>
                     <img src={image} alt={name + " project"} className="project__img" />
                 </div>
             </div>

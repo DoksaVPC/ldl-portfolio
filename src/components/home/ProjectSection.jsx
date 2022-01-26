@@ -1,6 +1,7 @@
 import ProjectsList from "./ProjectsList";
 
 function ProjectSection() {
+
     return (
         <section className="section-projects">
             <div className="container">

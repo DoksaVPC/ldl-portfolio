@@ -1,44 +1,115 @@
+import { useState, useEffect, useRef } from "react";
+import { Vector } from 'p5';
+
 import ProjectsItem from "./ProjectsItem";
-import StanWars from "../../assets/img/stan-wars.png"
-import Zest from "../../assets/img/zest.png"
-import PlayOfShadows from "../../assets/img/play-of-shadows.png"
+import ProjectData from "./ProjectsData";
 
 function ProjectsList() {
 
-    const projectsListItems = [
-       {name: 'Zest',
-        text: (<><strong>Interaction-focused</strong> streaming platform, designed for <strong>live events</strong></>),
-        tags: ['Data visualization', 'UX/UI design', 'React', 'd3.js'],
-        image: Zest
-       },
-       {name: 'Stan Wars',
-        text: (<>Interactive <strong>data visualizations</strong> about stan groups and <strong>hashtag hijacking</strong></>),
-        tags: ['Data visualization', 'UX/UI design', 'React', 'd3.js'],
-        image: StanWars
-       },
-       {name: 'Paola Mirai AR Jewels',
-        text: (<><strong>Augmented reality</strong> app for trying on 3D <strong>virtual jewels</strong> using a smartphone camera</>),
-        tags: ['AR', 'UX/UI design', 'Unity3D', 'Computer vision'],
-        image: StanWars
-       },
-        {
-        name: "The Hijacker's guide to Digital Activism",
-        text: (<><strong>informative</strong>, engaging <strong>digital experience</strong> on hashtag hijacking</>),
-        tags: ['Information design', 'UX/UI design', 'React'],
-        image: StanWars
-       },
-       {
-        name: "Play of Shadows",
-        text: (<>A mind-bending puzzle <strong>videogame</strong> about <strong>light and shadows</strong></>),
-        tags: ['Information design', 'UX/UI design', 'React'],
-        image: PlayOfShadows
-       }
-    ]
+    const animationStateRef = useRef({
+        mouseX: 0,
+        mouseY: 0,
+        targetX: 0,
+        targetY: 0,
+        distanceX: 0,
+        distanceY: 0,
+        request: null
+    });
+
+    const bubbleRef = useRef(null);
+    const bubbleBackgroundRef = useRef(null);
+
+    const [bubbleVisible, setbubbleVisible] = useState(false);
+
+    const handleHover = (isHovering) => {
+        if (isHovering) {
+            setbubbleVisible(true);
+        } else {
+            setbubbleVisible(false);
+        }
+    }
+
+    const remToPixels = (rem) => {    
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+
+    const radToDeg = (rad) => {
+        return rad * (180/Math.PI);
+    }
+
+    useEffect(() => {
+      const updateMousePosition = (e) => {
+          animationStateRef.current.mouseX = e.x - remToPixels(5);
+          animationStateRef.current.mouseY = e.y - remToPixels(5.5);
+      };
+      window.addEventListener('mousemove', updateMousePosition);
+
+      return () => {
+        window.removeEventListener('mousemove', updateMousePosition);
+      };
+    }, []);
+
+    useEffect(() => {
+        const followCursor = () => {
+            animationStateRef.current.request = requestAnimationFrame(followCursor);
+
+            let {
+                mouseX,
+                mouseY,
+                targetX,
+                targetY,
+                distanceX,
+                distanceY
+            } = animationStateRef.current;
+
+            if(!targetX | !targetY) {
+                animationStateRef.current.targetX = mouseX;
+                animationStateRef.current.targetY = mouseY;
+            } else {
+                animationStateRef.current.distanceX = (mouseX - targetX) * 0.15;
+                animationStateRef.current.distanceY = (mouseY - targetY) * 0.15;
+
+                if (Math.abs(animationStateRef.current.distanceX) + Math.abs(animationStateRef.current.distanceY) < 0.1) {
+                    animationStateRef.current.targetX = mouseX;
+                    animationStateRef.current.targetY = mouseY;
+                } else {
+                    animationStateRef.current.targetX += distanceX;
+                    animationStateRef.current.targetY += distanceY;
+                }
+            }
+
+            let distance = Math.sqrt(distanceX*distanceX + distanceY*distanceY) * 0.01;
+            if (distance > 0.2) {
+                distance = 0.2;
+            }
+            let direction = new Vector(distanceX, distanceY);
+            let angle = radToDeg(direction.heading());
+
+            bubbleRef.current.style.transform = 
+            `translate(${animationStateRef.current.targetX}px, ${animationStateRef.current.targetY}px)`;
+            bubbleBackgroundRef.current.style.transform = 
+            `rotate(${angle}deg)
+            scaleX(${1 + distance}) 
+            scaleY(${1 - distance})`;
+        };
+
+        followCursor();
+
+        return () => cancelAnimationFrame(animationStateRef.current.request);
+    }, [])
+
+    const projectsListItems = ProjectData;
     return (
         <div className="projects-list">
             {projectsListItems.map((item, index) => (
-                <ProjectsItem key={index} name={item.name} text={item.text} tags={item.tags} image={item.image} />
+                <ProjectsItem key={index} name={item.name} text={item.text} tags={item.tags} image={item.image} handleHover={handleHover} />
             ))}
+            <div className="exploreBubble" ref={bubbleRef}>
+            <div className={`exploreBubble__content ${bubbleVisible?'exploreBubble__content--show':'exploreBubble__content--hide'}`}>
+                <div className="exploreBubble__background" ref={bubbleBackgroundRef}></div>
+                <span>Explore</span> 
+            </div>
+            </div>
         </div>
     )
 }
