@@ -1,10 +1,17 @@
+
 function ProjectsItem( {name, image, text, tags, handleHover} ) {
+    
+    const onOver = (hovering) => {
+        handleHover(hovering);
+    }
+    
+    
     return (
         <div className="project">
             <div className="flex-column">
                 <h4 className="project__name u_show-on-mobile">{name}</h4>
-                <div className="project__image-box" onMouseEnter={() => handleHover(true)} onMouseOut={() => handleHover(false)}>
-                    <img src={image} alt={name + " project"} className="project__img" />
+                <div className="project__image-box" onMouseEnter={() => onOver(true)} onMouseOut={() => onOver(false)}>
+                    <img src={image} alt={name + " project"} className="project__img"/>
                 </div>
             </div>
             <div className="flex-column">

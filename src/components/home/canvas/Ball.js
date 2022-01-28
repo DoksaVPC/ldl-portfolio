@@ -19,7 +19,7 @@ class Ball {
            this.parts.push(newRect);
         }
 
-        this.body = Body.create({parts: this.parts, density: 0.0001, friction: 0, restitution: 0.5, frictionAir: 0.002});
+        this.body = Body.create({parts: this.parts, density: 0.0001, friction: 0, restitution: 0.7, frictionAir: 0.0005});
     }
 
     display( p5 ) {

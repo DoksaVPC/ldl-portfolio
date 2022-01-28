@@ -9,12 +9,12 @@ import ballImage1 from '../../../assets/img/canvas images/ball_1_2.png';
 import ballImage2 from '../../../assets/img/canvas images/ball_3_2.png';
 import ballImage3 from '../../../assets/img/canvas images/ball_2_2.png';
 
-import shape0 from '../../../assets/img/canvas images/shapes/0.png';
-import shape1 from '../../../assets/img/canvas images/shapes/1.png';
-import shape2 from '../../../assets/img/canvas images/shapes/2.png';
-import shape3 from '../../../assets/img/canvas images/shapes/3.png';
-import shape4 from '../../../assets/img/canvas images/shapes/4.png';
-import shape5 from '../../../assets/img/canvas images/shapes/5.png';
+import shape0 from '../../../assets/img/canvas images/shapes/0.svg';
+import shape1 from '../../../assets/img/canvas images/shapes/1.svg';
+import shape2 from '../../../assets/img/canvas images/shapes/2.svg';
+import shape3 from '../../../assets/img/canvas images/shapes/3.svg';
+import shape4 from '../../../assets/img/canvas images/shapes/4.svg';
+import shape5 from '../../../assets/img/canvas images/shapes/5.svg';
 
 let safeArea = {
     min: 0,
@@ -33,7 +33,7 @@ let isPortrait = false;
 function Canvas() {
 
     const ballImages = [ballImage1, ballImage2, ballImage3];
-    const shapeImages = [shape0, shape1, shape2, shape3, shape2, shape4, shape5];
+    const shapeImages = [shape0, shape1, shape2, shape3, shape2, shape4, shape5, shape3];
 
     const ballsData = BallsData;
 
@@ -131,13 +131,14 @@ function Canvas() {
 
     const draw = (p5) => {
         p5.clear();
+        innerObjects.forEach((obj) => {
+            obj.display( p5 );
+        });
         balls.forEach((ball) => {
             ball.display( p5 );
             ball.repel( p5, 0.1);
         });
-        innerObjects.forEach((obj) => {
-            obj.display( p5 );
-        });
+        
     }
 
 

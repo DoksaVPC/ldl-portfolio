@@ -39,8 +39,8 @@ function ProjectsList() {
 
     useEffect(() => {
       const updateMousePosition = (e) => {
-          animationStateRef.current.mouseX = e.x - remToPixels(5);
-          animationStateRef.current.mouseY = e.y - remToPixels(5.5);
+          animationStateRef.current.mouseX = e.x;
+          animationStateRef.current.mouseY = e.y;
       };
       window.addEventListener('mousemove', updateMousePosition);
 
@@ -86,7 +86,7 @@ function ProjectsList() {
             let angle = radToDeg(direction.heading());
 
             bubbleRef.current.style.transform = 
-            `translate(${animationStateRef.current.targetX}px, ${animationStateRef.current.targetY}px)`;
+            `translate(${animationStateRef.current.targetX - remToPixels(5)}px, ${animationStateRef.current.targetY - remToPixels(5.5)}px)`;
             bubbleBackgroundRef.current.style.transform = 
             `rotate(${angle}deg)
             scaleX(${1 + distance}) 

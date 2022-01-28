@@ -3,9 +3,29 @@
   flex-wrap: wrap;
   gap: $gutter-width;
   align-items: flex-end;
+  // padding: 2rem;
+  // padding-top: 2.5rem;
+  // width: calc(100% + 4rem);
+  // margin-left: -2rem;
+  // transition: background-color 0.3s;
+  // border-radius: 4rem;
+
+  // &:hover {
+  //   background-color: $color-accent-extralight;
+  // }
+
+  // &:hover &__image-box {
+  //   transform: translateY(-0.5rem);
+  //   box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.3),
+  //     0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  // }
 
   @include respond(tab-port) {
     gap: $gutter-width-small;
+    // padding: 0rem;
+    // width: 100%;
+    // margin-left: 0;
+    // border-radius: initial;
   }
 
   &:not(&:last-child) {
@@ -17,6 +37,7 @@
   }
 
   &__image-box {
+    position: relative;
     width: 100%;
     height: 44rem;
     background-color: grey;
@@ -26,10 +47,16 @@
       0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
     cursor: pointer;
+    transition: all 0.3s ease-out;
 
     @include respond(phone) {
       height: 30rem;
     }
+  }
+
+  &__image-box:hover &__img {
+    transform: scale(1.08);
+    transition: transform 0.3s ease-in-out;
   }
 
   &__img {
@@ -38,11 +65,7 @@
     object-fit: cover;
     object-position: center;
     transition: transform 0.35s ease-in-out;
-
-    &:hover {
-      transform: scale(1.08);
-      transition: transform 0.3s ease-in-out;
-    }
+    pointer-events: none;
   }
 
   &__name,

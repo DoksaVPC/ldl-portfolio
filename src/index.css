@@ -10,7 +10,7 @@
  - tab-land
  - big-desktop
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Taviraj:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Taviraj:wght@300;400;500;600;700&display=swap");
 *,
 *::after,
 *::before {
@@ -43,7 +43,6 @@ ol,
 ul {
   list-style: none; }
 
-img,
 picture,
 video,
 canvas,
@@ -103,7 +102,7 @@ body::before {
     opacity: 1; } }
 
 html {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Rubik", sans-serif; }
 
 .heading-primary__main {
   display: block;
@@ -148,7 +147,7 @@ html {
   display: block;
   position: relative;
   font-size: 4em;
-  font-weight: 500; }
+  font-weight: 600; }
   .heading-secondary::after {
     content: "";
     display: block;
@@ -240,7 +239,7 @@ html {
   background: linear-gradient(to right bottom, rgba(167, 188, 255, 0.8), #5972ff); }
 
 .section-projects {
-  padding: 10rem 0;
+  padding: 12rem 0;
   position: relative; }
 
 .button {
@@ -326,25 +325,28 @@ html {
       .project:not(.project:last-child) {
         margin-bottom: 12rem; } }
   .project__image-box {
+    position: relative;
     width: 100%;
     height: 44rem;
     background-color: grey;
     border-radius: 2.4rem;
     overflow: hidden;
     box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2), 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.3s ease-out; }
     @media (max-width: 37.5em) {
       .project__image-box {
         height: 30rem; } }
+  .project__image-box:hover .project__img {
+    transform: scale(1.08);
+    transition: transform 0.3s ease-in-out; }
   .project__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.35s ease-in-out; }
-    .project__img:hover {
-      transform: scale(1.08);
-      transition: transform 0.3s ease-in-out; }
+    transition: transform 0.35s ease-in-out;
+    pointer-events: none; }
   .project__name, .project__description, .project__tag-list {
     pointer-events: none; }
   .project__name {
