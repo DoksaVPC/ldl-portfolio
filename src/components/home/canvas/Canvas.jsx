@@ -119,14 +119,14 @@ function Canvas() {
         
 });
 
-        //run matter.js engine
+        //run matter.js engine after the heading animation
         Composite.add(world, [ground, wall1, wall2]);
         setTimeout(() => {
             Runner.run(engine);
             for (let i = 0; i < ballsData.length; i++) {
             Body.setVelocity(balls[i].body, ballsData[i].initialVelocity);
         }
-        }, 800);
+        }, 1000);
     }
 
     const draw = (p5) => {

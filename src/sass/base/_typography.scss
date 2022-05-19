@@ -8,7 +8,7 @@ html {
     font-size: 10rem;
     line-height: 10.5rem;
     font-family: $font-heading;
-    font-weight: 600;
+    font-weight: 800;
 
     @include respond(tab-port) {
       font-size: 14rem;
@@ -28,17 +28,17 @@ html {
     &--top {
       display: block;
       opacity: 0;
-      animation: moveInLeft 2s cubic-bezier(0.57, 0, 0, 1) forwards;
+      animation: moveInLeft 2s cubic-bezier(0.57, 0, 0, 1) 0.1s forwards;
     }
 
     &--center {
-      animation: fadeIn 1s ease-in-out;
+      animation: fadeIn 1s ease-in-out 0.1s;
     }
 
     &--bottom {
       display: block;
       opacity: 0;
-      animation: moveInRight 2s cubic-bezier(0.57, 0, 0, 1) forwards;
+      animation: moveInRight 2s cubic-bezier(0.57, 0, 0, 1) 0.1s forwards;
     }
   }
 
@@ -50,31 +50,96 @@ html {
     font-weight: 700;
     color: $color-accent;
     opacity: 0;
-    animation: moveInTop 1.5s cubic-bezier(0.21, 0, 0, 0.99) 0.5s forwards;
+    animation: moveInTop 1.5s cubic-bezier(0.21, 0, 0, 0.99) 0.6s forwards;
   }
 }
 
 .heading-secondary {
-  display: block;
+  display: inline-block;
   position: relative;
-  font-size: 4em;
-  font-weight: 600;
+  font-size: 6.8rem;
+  font-family: $font-heading;
+  font-weight: 500;
+  line-height: 105%;
 
-  // @include respond(tab-port) {
-  //   padding-left: 4rem;
-  // }
+  &--bold {
+    font-weight: 700;
+  }
 
-  &::after {
+  &--arrow {
+    &::after {
+      font-family: $font-default;
+      content: "\2193";
+      font-size: 2.8rem;
+      margin-left: 1rem;
+      display: inline-block;
+      transform: translateY(-0.8rem);
+    }
+  }
+
+  @include respond(phone) {
+    font-size: 5rem;
+  }
+
+  .highlight {
+    display: inline-block;
+    color: $color-accent-attenuated;
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+.avoid-wrap {
+  display: inline-block;
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 120%;
+  font-weight: 500;
+  padding-left: 1.6rem;
+  position: relative;
+  color: $color-accent;
+
+  &::before {
     content: "";
     display: block;
     position: absolute;
-    bottom: -1.5rem;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(
-      to left,
-      rgba($color-accent-light, 0.5),
-      rgba($color-accent, 0.8)
-    );
+    left: 0;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    width: 0.6rem;
+    background-color: $color-accent-attenuated;
+  }
+}
+
+.heading-four {
+  font-size: 4rem;
+  font-family: $font-heading;
+  font-weight: 500;
+  line-height: 110%;
+
+  .highlight {
+    display: inline-block;
+    color: $color-accent-attenuated;
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+.heading-five {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.body-text {
+  font-size: 1.8rem;
+  margin-top: 1.2rem;
+  font-weight: 300;
+
+  @include respond(tab-land) {
+    font-size: 2rem;
   }
 }

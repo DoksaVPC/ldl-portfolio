@@ -1,0 +1,133 @@
+.details {
+  padding-bottom: 12rem;
+
+  &__section-intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter-width;
+    min-height: 90vh;
+    padding: 12rem 0;
+    align-items: center;
+    justify-content: center;
+
+    .project__tag-list {
+      margin-top: 8rem;
+
+      opacity: 0;
+      animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) forwards;
+    }
+  }
+
+  &__intro-text {
+    @include column(6);
+
+    .heading-secondary {
+      opacity: 0;
+      animation: moveInRight 1.3s cubic-bezier(0.2, 0, 0.03, 1) 0.05s forwards;
+    }
+
+    .project__name {
+      opacity: 0;
+      animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) forwards;
+    }
+
+    @include respond(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__intro-summary {
+    @include column(5);
+    padding: 8rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.6rem 1.6rem rgba($color-primary, 0.15);
+    //border: 1px rgba($color-primary, 0.3) solid;
+    opacity: 0;
+    animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) 0.2s forwards;
+    //animation-delay: 0.2s;
+
+    &__content {
+      font-size: 1.6rem;
+    }
+
+    &__item {
+      &:not(&:last-child) {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    &__label {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $color-accent;
+      margin-bottom: 0.2rem;
+    }
+
+    @include respond(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__hero {
+    height: 40vw;
+    background-color: $color-grey-light;
+  }
+
+  &__overview {
+    padding-top: 12.8rem;
+  }
+
+  .heading-tertiary {
+    @include column(2);
+    flex-grow: 0;
+  }
+
+  &__paragraph {
+    @include column(6);
+    flex-grow: 0;
+    @include respond(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__main-content {
+    @include column(8);
+    border-radius: 2rem;
+    //box-shadow: 0 1rem 2rem rgba($color-primary, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      flex-basis: 100%;
+      order: 2;
+    }
+
+    img {
+      width: 102%;
+      background-color: $color-grey-light;
+    }
+  }
+
+  &__support-content {
+    @include column(4);
+  }
+
+  &__overview-highlight {
+    &:nth-child(2) {
+      .details__main-content {
+        order: 2;
+      }
+    }
+
+    &:not(&:last-child) {
+      margin-bottom: 8rem;
+    }
+
+    @include respond(tab-port) {
+      gap: 4rem;
+    }
+  }
+}

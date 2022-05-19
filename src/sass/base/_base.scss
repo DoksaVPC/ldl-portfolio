@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Taviraj:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,500;0,700;0,800;1,600&display=swap");
 
 //set border-box and remove defalt margins and paddings on all elements
 *,
@@ -70,19 +70,4 @@ select {
 //set base text color and background to transparent
 html {
   color: $color-primary;
-}
-
-//create a fixed gradient background
-body::before {
-  content: "";
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background: linear-gradient(
-    to bottom right,
-    $color-background,
-    rgba($color-accent-light, 0.25)
-  );
-  z-index: -1000;
 }

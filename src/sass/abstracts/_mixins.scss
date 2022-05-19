@@ -40,3 +40,10 @@
     } //1800px
   }
 }
+
+@mixin column($span) {
+  flex: 1 1 auto;
+  flex-basis: calc(
+    #{$span} * (100% - 11 * #{$gutter-width}) / 12 + (#{$span} - 1) * #{$gutter-width}
+  );
+}

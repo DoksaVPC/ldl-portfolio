@@ -30,8 +30,12 @@
   margin-bottom: 2.4rem;
 }
 
+.u_margin-bottom-ml {
+  margin-bottom: 4rem;
+}
+
 .u_margin-bottom-l {
-  margin-bottom: 5rem;
+  margin-bottom: 6.4rem;
 }
 
 .u_margin-bottom-xl {
@@ -80,4 +84,13 @@
   @include respond(tab-port) {
     display: none;
   }
+}
+
+.u_flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.u_flex-baseline {
+  align-items: baseline;
 }
