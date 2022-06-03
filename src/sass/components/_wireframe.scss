@@ -1,0 +1,80 @@
+.wireframe {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    gap: 4.8rem;
+  }
+
+  &__row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    &:nth-child(even) {
+      padding-top: 8rem;
+    }
+  }
+
+  &__screen {
+    position: relative;
+    width: 100%;
+  }
+
+  &__screen-container {
+    position: absolute;
+    overflow-y: scroll;
+    border: 2px solid $color-accent;
+
+    &--desktop {
+      top: 5%;
+      left: 10.8%;
+      width: 78.2%;
+      height: 77.7%;
+      border-radius: 0.5rem;
+    }
+
+    &--mobile {
+      top: 2.8%;
+      left: 36.4%;
+      width: 28.2%;
+      height: 94%;
+      border-radius: 2rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  &__screen-image {
+    border-radius: 0.5rem;
+  }
+
+  &__template {
+    position: relative;
+    pointer-events: none;
+
+    #lightLines {
+      stroke-width: 2;
+    }
+
+    #boldLines {
+      .st1 {
+        stroke-width: 4;
+      }
+    }
+  }
+}

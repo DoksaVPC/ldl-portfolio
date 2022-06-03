@@ -10,12 +10,20 @@
   margin-top: 2.4rem;
 }
 
+.u_margin-top-ml {
+  margin-top: 4rem;
+}
+
 .u_margin-top-l {
-  margin-top: 5rem;
+  margin-top: 6.4rem;
 }
 
 .u_margin-top-xl {
   margin-top: 8rem;
+}
+
+.u_margin-top-xxl {
+  margin-top: 12rem;
 }
 
 .u_margin-bottom-xs {
@@ -93,4 +101,10 @@
 
 .u_flex-baseline {
   align-items: baseline;
+}
+
+.u_separator-bottom {
+  padding-bottom: 8rem;
+  margin-bottom: 8rem;
+  border-bottom: 1px $color-grey-light solid;
 }

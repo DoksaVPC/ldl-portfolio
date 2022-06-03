@@ -70,3 +70,15 @@
     transform: scale(1);
   }
 }
+
+@keyframes stretch {
+  0% {
+    transform: (scaleX(1));
+  }
+  50% {
+    transform: (scaleX(1.5));
+  }
+  100% {
+    transform: (scaleX(1));
+  }
+}

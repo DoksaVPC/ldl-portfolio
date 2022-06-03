@@ -29,16 +29,13 @@ function Header() {
           <div className="introduction">
             <div className="introduction__text">
               <p className="introduction__paragraph">
-                I’m an UI/UX <strong>designer</strong> and a front-end{" "}
-                <strong>developer</strong>, with a solid background in{" "}
-                <strong>visual design</strong> and{" "}
-                <strong>motion graphics</strong>.
+                I’m an UI/UX designer and a front-end developer, with a solid
+                background in visual design and motion graphics.
               </p>
               <p className="introduction__paragraph">
-                My work is driven by <strong>enthusiasm and curiosity</strong>{" "}
-                towards technology as a creative tool, and by passion in
-                exploring the ways in which humans can <strong>interact</strong>{" "}
-                with it.
+                My work is driven by enthusiasm and curiosity towards technology
+                as a creative tool, and by passion in exploring the ways in
+                which humans can interact with it.
               </p>
               <span className="button button--link button--primary u_margin-top-l">
                 See my resume &rarr;

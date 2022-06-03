@@ -17,4 +17,107 @@
     );
     color: $color-background;
   }
+
+  &-round {
+    border-radius: 100%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0.2rem 0.8rem rgba($color-primary, 0.3);
+
+    &:hover {
+      box-shadow: 0 0.4rem 1.6rem rgba($color-primary, 0.2);
+    }
+
+    &--big {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 100%;
+      background-color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.toggle-button {
+  padding: 4px;
+  background-color: rgba($color-primary, 0.2);
+  border-radius: 100px;
+  pointer-events: none;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: rgba($color-primary, 0.3);
+  }
+
+  &__container {
+    display: flex;
+    gap: 2px;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  &__option {
+    font-size: 1.4rem;
+    padding: 1.2rem 3.2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+    position: relative;
+
+    &--selected {
+      font-weight: 600;
+      letter-spacing: 0.046rem;
+    }
+
+    &--unselected {
+      font-weight: 500;
+      letter-spacing: 0.06rem;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    font-size: 1.4rem;
+
+    letter-spacing: 0.046rem;
+    position: absolute;
+
+    font-weight: 600;
+    top: 0;
+
+    color: white;
+    transition: 0.15s ease-out;
+
+    &--first {
+      left: 0;
+      right: unset;
+    }
+
+    &--second {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__toggle-box {
+    border-radius: 100px;
+    padding: 1.2rem 3.2rem;
+    background-color: white;
+    &--moving {
+      //animation: stretch 0.15s ease-in-out;
+    }
+  }
 }

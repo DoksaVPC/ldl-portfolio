@@ -87,6 +87,12 @@ html {
     font-weight: 600;
     font-style: italic;
   }
+
+  &--number {
+    font-size: 20rem;
+    color: white;
+    font-weight: 500;
+  }
 }
 
 .avoid-wrap {
@@ -95,23 +101,24 @@ html {
 
 .heading-tertiary {
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 120%;
+  letter-spacing: 0.16rem;
   font-weight: 500;
-  padding-left: 1.6rem;
+  // padding-left: 1.6rem;
   position: relative;
   color: $color-accent;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0.2rem;
-    bottom: 0.2rem;
-    width: 0.6rem;
-    background-color: $color-accent-attenuated;
-  }
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0.3rem;
+  //   bottom: 0.3rem;
+  //   width: 3px;
+  //   background-color: $color-accent-attenuated;
+  // }
 }
 
 .heading-four {
@@ -130,7 +137,8 @@ html {
 
 .heading-five {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.075rem;
   text-transform: uppercase;
 }
 

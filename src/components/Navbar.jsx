@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/ldl-logo.svg";
 
 function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const addBackgroundOnScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else if (window.scrollY < 100) {
+        setIsScrolled(false);
+      }
+    };
+
+    document.addEventListener("scroll", addBackgroundOnScroll);
+
+    return () => {
+      document.removeEventListener("scroll", addBackgroundOnScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__logo-box">
         <img
           src={Logo}

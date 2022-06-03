@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import ProjectDetails from "./pages/ProjectDetails";
+import ProjectData from "./components/home/ProjectsData";
 import Lottie from "react-lottie-player";
 import introAnimation from "./assets/intro_animation.json";
 import ScrollToTop from "./components/ScrollToTop";
@@ -48,6 +49,24 @@ function App() {
         text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
       },
     ],
+    summary: [
+      {
+        title: "research",
+        content: ["Interviews", "User Personas", "Journey maps"],
+      },
+      {
+        title: "define",
+        content: ["User insight", "Concept definition", "Key features"],
+      },
+      {
+        title: "structure",
+        content: ["Ecosystem map", "Information architecture"],
+      },
+      {
+        title: "prototype",
+        content: ["Wireframe", "Design system", "High-fidelity prototype"],
+      },
+    ],
   };
 
   return (
@@ -67,11 +86,14 @@ function App() {
           path="/project"
           element={
             <ProjectDetails
-              name={projectProps.name}
-              headline={projectProps.headline}
-              info={projectProps.info}
-              tags={projectProps.tags}
-              highlights={projectProps.highlights}
+              name={ProjectData[0].name}
+              headline={ProjectData[0].headline}
+              info={ProjectData[0].info}
+              tags={ProjectData[0].tags}
+              overview={ProjectData[0].overview}
+              highlights={ProjectData[0].highlights}
+              summary={ProjectData[0].summary}
+              chapters={ProjectData[0].chapters}
             />
           }
         />
