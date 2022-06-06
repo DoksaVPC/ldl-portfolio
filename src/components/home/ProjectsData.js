@@ -197,7 +197,7 @@ const ProjectData = [
             contents: [
               {
                 main: {
-                  image: "/overview/0.jpg",
+                  image: "/information_architecture.svg",
                 },
               },
             ],
@@ -250,9 +250,10 @@ const ProjectData = [
                 main: {
                   carousel: true,
                   images: [
-                    "/overview/0.jpg",
-                    "/overview/1.jpg",
-                    "/overview/2.jpg",
+                    "/design system/0.png",
+                    "/design system/1.png",
+                    "/design system/2.png",
+                    "/design system/3.png",
                   ],
                 },
               },
