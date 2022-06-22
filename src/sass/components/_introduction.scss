@@ -11,7 +11,11 @@
   //}
   padding: 12rem 12rem;
   border-radius: 2rem;
-  background: $color-accent-light;
+  background: linear-gradient(
+    to bottom right,
+    rgba($color-accent-extralight, 1),
+    rgba($color-accent-light, 1)
+  );
 
   @include respond(tab-port) {
     padding: 12rem 6rem;

@@ -8,7 +8,8 @@ function Carousel({ children }) {
     setPage(index);
   };
 
-  const arrowClick = (direction) => {
+  const arrowClick = (direction, e) => {
+    e.preventDefault();
     changePage(page + direction);
   };
 
@@ -17,7 +18,9 @@ function Carousel({ children }) {
       <div className="carousel__container">
         <div
           className="carousel__slider"
-          style={{ transform: `translateX(-${page * 100}%)` }}>
+          style={{
+            transform: `translateX(calc(-${page * 100}% - ${page * 3.2}rem))`,
+          }}>
           {children}
         </div>
       </div>
@@ -37,16 +40,16 @@ function Carousel({ children }) {
           page === 0 ? "button--disabled" : ""
         }`}
         style={{ backgroundImage: `url(${ArrowIcon})` }}
-        onClick={() => {
-          arrowClick(-1);
+        onClick={(e) => {
+          arrowClick(-1, e);
         }}></button>
       <button
         className={`button button-round button-round--big carousel__button carousel__button--right ${
           page >= children.length - 1 ? "button--disabled" : ""
         }`}
         style={{ backgroundImage: `url(${ArrowIcon})` }}
-        onClick={() => {
-          arrowClick(1);
+        onClick={(e) => {
+          arrowClick(1, e);
         }}></button>
     </div>
   );

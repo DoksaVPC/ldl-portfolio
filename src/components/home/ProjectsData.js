@@ -1,6 +1,8 @@
 import StanWars from "../../assets/img/stan-wars.png";
 import Zest from "../../assets/img/zest.png";
+import Volunteering from "../../assets/img/cover.webp";
 import PlayOfShadows from "../../assets/img/play-of-shadows.png";
+import PaolaMirai from "../../assets/img/paolamirai.webp";
 
 const ProjectData = [
   {
@@ -12,11 +14,12 @@ const ProjectData = [
       </>
     ),
     tags: ["Data visualization", "UX/UI design", "React", "d3.js"],
-    image: Zest,
+    image: Volunteering,
     headline: (
       <>
-        Translating <span className="highlight">social dynamics</span> of live
-        events into the <span className="highlight">digital space</span>
+        A digital portal for <span className="highlight">non profit</span>{" "}
+        sector with <span className="highlight">volunteers</span> and{" "}
+        <span className="highlight">donors</span>
       </>
     ),
     info: [
@@ -73,26 +76,32 @@ const ProjectData = [
           {
             title: "user interviews",
             headline:
-              "We conducted a research on users through a survey, followed by some interviews with music artists and several focus groups with music fans",
+              "Understanding the organizations' main needs and discovering motivations and goals behind different types of volunteers",
             paragraph:
               "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
             contents: [
               {
                 main: {
-                  image: "/overview/0.jpg",
-                },
-                support: {
-                  title: "Online survey",
-                  text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
-                },
-              },
-              {
-                main: {
-                  image: "/overview/0.jpg",
+                  image: "/research/0.png",
                 },
                 support: {
                   title: "Interviews with artists",
                   text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
+                },
+              },
+            ],
+          },
+          {
+            title: "user insights",
+            contents: [
+              {
+                main: {
+                  carousel: true,
+                  images: [
+                    "/insights/0.png",
+                    "/insights/1.png",
+                    "/insights/2.png",
+                  ],
                 },
               },
             ],
@@ -113,7 +122,7 @@ const ProjectData = [
                   ],
                 },
                 support: {
-                  title: "the personas",
+                  title: "two coordinators, four volunteers",
                   text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
                 },
               },
@@ -125,35 +134,15 @@ const ProjectData = [
         title: "Define",
         sections: [
           {
-            title: "user insights",
+            title: "concept definition",
             headline:
-              "Gathered some insights emerging from the research phase that guided the concept definition",
+              "Developing a platform meeting the goals and needs of organizations and volunteers",
             paragraph:
               "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
             contents: [
               {
                 main: {
-                  carousel: true,
-                  images: [
-                    "/insights/0.png",
-                    "/insights/1.png",
-                    "/insights/2.png",
-                  ],
-                },
-              },
-            ],
-          },
-          {
-            title: "concept definition",
-            contents: [
-              {
-                main: {
-                  image: "/overview/0.jpg",
-                },
-              },
-              {
-                main: {
-                  image: "/overview/0.jpg",
+                  image: "/concept/1.png",
                 },
               },
             ],
@@ -163,12 +152,20 @@ const ProjectData = [
             contents: [
               {
                 main: {
-                  image: "/overview/0.jpg",
+                  image: "/concept/0.png",
+                },
+                support: {
+                  title: "three volunteering modes",
+                  text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
                 },
               },
               {
                 main: {
-                  image: "/overview/0.jpg",
+                  image: "/concept/2.png",
+                },
+                support: {
+                  title: "two fundraising types",
+                  text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
                 },
               },
             ],
@@ -181,13 +178,13 @@ const ProjectData = [
           {
             title: "ecosystem map",
             headline:
-              "Mapped the service ecosystem highlighting main stakeholders and their relationships",
+              "Mapping the service ecosystem to highlight main stakeholders, service components and their relationships",
             paragraph:
               "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
             contents: [
               {
                 main: {
-                  image: "/overview/0.jpg",
+                  image: "/ecosystem.png",
                 },
               },
             ],
@@ -197,7 +194,7 @@ const ProjectData = [
             contents: [
               {
                 main: {
-                  image: "/information_architecture.svg",
+                  image: "/information_architecture.png",
                 },
               },
             ],
@@ -254,6 +251,8 @@ const ProjectData = [
                     "/design system/1.png",
                     "/design system/2.png",
                     "/design system/3.png",
+                    "/design system/4.png",
+                    "/design system/5.png",
                   ],
                 },
               },
@@ -262,6 +261,17 @@ const ProjectData = [
         ],
       },
     ],
+  },
+  {
+    name: "paola mirai ar jewels",
+    text: (
+      <>
+        <strong>Augmented reality</strong> app for trying on 3D{" "}
+        <strong>virtual jewels</strong> using a smartphone camera
+      </>
+    ),
+    tags: ["AR", "UX/UI design", "Unity3D", "Computer vision"],
+    image: PaolaMirai,
   },
   {
     name: "zest",
@@ -288,17 +298,6 @@ const ProjectData = [
       </>
     ),
     tags: ["Data visualization", "UX/UI design", "React", "d3.js"],
-    image: StanWars,
-  },
-  {
-    name: "paola mirai ar jewels",
-    text: (
-      <>
-        <strong>Augmented reality</strong> app for trying on 3D{" "}
-        <strong>virtual jewels</strong> using a smartphone camera
-      </>
-    ),
-    tags: ["AR", "UX/UI design", "Unity3D", "Computer vision"],
     image: StanWars,
   },
   {

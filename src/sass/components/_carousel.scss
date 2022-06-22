@@ -4,9 +4,10 @@
 
   &__container {
     width: 100%;
-    background-color: $color-grey-light;
+    background-color: rgba($color-grey-light, 0);
     border-radius: 2rem;
     overflow: hidden;
+    border: 1px solid $color-grey-light;
   }
 
   &__button {
@@ -79,5 +80,9 @@
   &__item {
     width: 100%;
     display: inline-block;
+
+    &:not(&:last-child) {
+      margin-right: 3.2rem;
+    }
   }
 }

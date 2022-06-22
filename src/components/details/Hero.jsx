@@ -85,8 +85,8 @@ function Hero({ name }) {
       }
 
       backgroundRef.current.style.transform = `translate(${
-        -50 - animationStateRef.current.targetX * 1.8
-      }%, ${-40 - animationStateRef.current.targetY * 2}%)`;
+        -50 - animationStateRef.current.targetX * 1.6
+      }%, ${-40 - animationStateRef.current.targetY * 1.8}%)`;
       foregroundRef.current.style.transform = `translate(${
         -50 - animationStateRef.current.targetX * 2.25
       }%, ${-45 - animationStateRef.current.targetY * 3.2}%)`;

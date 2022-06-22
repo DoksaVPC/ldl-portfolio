@@ -18,10 +18,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 4.8rem;
+    gap: 6.4rem;
 
     &:nth-child(even) {
-      padding-top: 8rem;
+      padding-top: 12rem;
     }
   }
 
@@ -51,12 +51,12 @@
       border-radius: 2rem;
     }
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
 
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    // -ms-overflow-style: none; /* IE and Edge */
+    // scrollbar-width: none; /* Firefox */
   }
 
   &__screen-image {

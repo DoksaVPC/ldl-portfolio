@@ -71,7 +71,7 @@ function ProjectDetails({
               </div>
               <div className="details__support-content">
                 <h5 className="heading-five">{item.title}</h5>
-                <p className="body-text">{item.text}</p>
+                <p className="body-text body-text--small">{item.text}</p>
               </div>
             </div>
           ))}
@@ -118,9 +118,7 @@ function ProjectDetails({
               }`}>
               <div
                 className={`container--flex u_flex-baseline ${
-                  section.headline
-                    ? "u_margin-bottom-xxl"
-                    : "u_margin-bottom-xl"
+                  section.headline ? "u_margin-bottom-xl" : "u_margin-bottom-xl"
                 }`}>
                 <h3 className="heading-tertiary">{section.title}</h3>
                 {section.headline && (
@@ -178,7 +176,9 @@ function ProjectDetails({
                   {content.support && (
                     <div className="details__support-content">
                       <h5 className="heading-five">{content.support.title}</h5>
-                      <p className="body-text">{content.support.text}</p>
+                      <p className="body-text body-text--small">
+                        {content.support.text}
+                      </p>
                     </div>
                   )}
                 </div>
