@@ -142,13 +142,18 @@ function ProjectDetails({
                     <div className="details__main-content">
                       <Carousel>
                         {content.main.images.map((image, index) => (
+                          <picture className="carousel__item">   
+                          <source media="(max-width: 56.25em)" 
+                              srcset={
+                              process.env.PUBLIC_URL + "/images/" + name + image.split(".")[0] + "-portrait." + image.split(".")[1]
+                            }/>    
                           <img
-                            className="carousel__item"
                             src={
                               process.env.PUBLIC_URL + "/images/" + name + image
                             }
-                            alt={"overview" + index}
+                            alt={section.title + index}
                           />
+                          </picture>
                         ))}
                       </Carousel>
                     </div>

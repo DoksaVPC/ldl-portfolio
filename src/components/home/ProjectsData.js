@@ -155,7 +155,7 @@ const ProjectData = [
                   image: "/concept/0.png",
                 },
                 support: {
-                  title: "three volunteering modes",
+                  title: "three volunteering options",
                   text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
                 },
               },
@@ -258,6 +258,20 @@ const ProjectData = [
               },
             ],
           },
+          {
+            title: "high-fidelity prototype",
+            contents: [
+              {
+                main: {
+                  image: "/overview/0.webp",
+                },
+                support: {
+                  title: "three volunteering options",
+                  text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
+                },
+              },
+            ]
+          }
         ],
       },
     ],
