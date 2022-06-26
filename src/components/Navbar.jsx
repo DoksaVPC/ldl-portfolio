@@ -7,7 +7,6 @@ function Navbar() {
 
   useEffect(() => {
     const addBackgroundOnScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY > 100) {
         setIsScrolled(true);
       } else if (window.scrollY < 100) {

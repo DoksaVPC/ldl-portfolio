@@ -93,6 +93,10 @@ html {
     font-size: 20rem;
     color: white;
     font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 12rem;
+    }
   }
 }
 
@@ -157,6 +161,7 @@ html {
   margin-top: 1.4rem;
   font-weight: 300;
   line-height: 160%;
+  letter-spacing: 0.02em;
 
   @include respond(tab-land) {
     font-size: 2.2rem;
@@ -167,5 +172,33 @@ html {
     @include respond(tab-land) {
       font-size: 2rem;
     }
+  }
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: relative;
+  flex-shrink: 0;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid $color-accent-attenuated;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-left: 2px solid $color-accent-attenuated;
+    border-top: 2px solid $color-accent-attenuated;
+    width: 30%;
+    height: 30%;
+    transform: translateX(-60%) rotate(-135deg);
+    bottom: 3%;
+    left: 50%;
   }
 }

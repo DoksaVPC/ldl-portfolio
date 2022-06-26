@@ -22,8 +22,6 @@ function Hero({ name }) {
     let dimensions = containerRef.current.getBoundingClientRect();
     animationStateRef.current.containerHeight = dimensions.height;
     animationStateRef.current.containerY = dimensions.y + window.scrollY;
-    console.log(animationStateRef.current.containerHeight);
-    console.log(animationStateRef.current.containerY);
   }, []);
 
   useEffect(() => {

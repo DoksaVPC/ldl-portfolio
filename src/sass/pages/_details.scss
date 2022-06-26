@@ -39,8 +39,9 @@
   &__intro-summary {
     @include column(5);
     padding: 8rem;
-    border-radius: 6.4rem;
-    box-shadow: 0 0.6rem 1.6rem rgba($color-primary, 0.15);
+    border-radius: 3.2rem;
+    //box-shadow: 0 0.6rem 1.6rem rgba($color-primary, 0.15);
+    @include shadow();
     //border: 1px rgba($color-primary, 0.3) solid;
     opacity: 0;
     animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) 0.2s forwards;
@@ -79,12 +80,21 @@
     overflow: hidden;
     position: relative;
 
+    @include respond(tab-port) {
+      height: 80vh;
+    }
+
     img {
       width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @include respond(tab-port) {
+        left: 65%;
+        width: 350%;
+      }
     }
   }
 
@@ -122,6 +132,7 @@
 
     @include respond(tab-port) {
       flex-basis: 100%;
+      width: 100%;
       order: 2;
     }
 
@@ -185,7 +196,8 @@
     @include column(3);
     border-radius: 2rem;
     padding: 3.6rem;
-    box-shadow: 0 0.6rem 1.6rem rgba($color-primary, 0.15);
+    //box-shadow: 0 0.6rem 1.6rem rgba($color-primary, 0.15);
+    @include shadow();
 
     @include respond(phone) {
       flex-basis: 100%;
@@ -250,7 +262,65 @@
     }
 
     background-color: $color-accent-light;
-    padding: 12rem 0;
+    padding: 6.4rem 0;
     margin: 12rem 0;
+  }
+}
+
+.fact {
+  width: 100%;
+  @include shadow();
+  border-radius: 2rem;
+  padding: 6.4rem 8rem;
+  padding-bottom: 10rem;
+
+  @include respond(phone) {
+    padding: 4rem 4rem;
+    padding-bottom: 8rem;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__heading-number {
+    font-size: 9.6rem;
+    color: $color-accent-attenuated;
+    font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 8rem;
+    }
+  }
+
+  &__heading-text {
+    font-size: 3.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    @include respond(phone) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__list-item {
+    margin-left: 1rem;
+    display: flex;
+    gap: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 160%;
+    letter-spacing: 0.02rem;
+    &:not(&:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .arrow {
+    transform: rotate(-90deg);
+    flex-shrink: 0;
   }
 }

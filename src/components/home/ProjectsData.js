@@ -3,6 +3,7 @@ import Zest from "../../assets/img/zest.png";
 import Volunteering from "../../assets/img/cover.webp";
 import PlayOfShadows from "../../assets/img/play-of-shadows.png";
 import PaolaMirai from "../../assets/img/paolamirai.webp";
+import Card from "../shared/Card";
 
 const ProjectData = [
   {
@@ -82,7 +83,47 @@ const ProjectData = [
             contents: [
               {
                 main: {
-                  image: "/research/0.png",
+                  customContent: (
+                    <>
+                      <div className="fact">
+                        <h5 className="fact__heading">
+                          <span className="fact__heading-number">10</span>
+                          <span className="fact__heading-text">Interviews</span>
+                        </h5>
+                        <ul>
+                          <li className="fact__list-item">
+                            <div className="arrow"></div>
+                            <p>
+                              5 di sesso <strong>femminile</strong>, 5 di sesso{" "}
+                              <strong>maschile</strong>
+                            </p>
+                          </li>
+                          <li className="fact__list-item">
+                            <div className="arrow"></div>
+                            <p>
+                              Tra i <strong>25</strong> e i <strong>75</strong>{" "}
+                              anni
+                            </p>
+                          </li>
+                          <li className="fact__list-item">
+                            <div className="arrow"></div>
+                            <p>
+                              Residenti in <strong>diverse regioni</strong>{" "}
+                              italiane
+                            </p>
+                          </li>
+                          <li className="fact__list-item">
+                            <div className="arrow"></div>
+                            <p>
+                              Che ricoprono <strong>diversi ruoli</strong> in
+                              organizzazioni non profit: coordinatori,
+                              dipendenti, volontari, volontari occasionali
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </>
+                  ),
                 },
                 support: {
                   title: "Interviews with artists",
@@ -97,10 +138,27 @@ const ProjectData = [
               {
                 main: {
                   carousel: true,
-                  images: [
-                    "/insights/0.png",
-                    "/insights/1.png",
-                    "/insights/2.png",
+                  insights: [
+                    {
+                      mainText:
+                        "Main headline summarizing the insight, telling about an issue that emerged while i was interviewing people.",
+                      bodyText:
+                        "A more in-depth explaination of the issue, highlighting some opportunities of intervento. Giusto tre o quattro righe che diano un contesto.",
+                      image: "/insights/0.png",
+                      quote: {
+                        text: "ciao questa è una citazione.",
+                        author: "Michele, 48",
+                      },
+                    },
+                    {
+                      mainText: "ciao",
+                      bodyText: "ciao ciao",
+                      image: null,
+                      quote: {
+                        text: "ciao questa è una citazione.",
+                        author: "Michele, 48",
+                      },
+                    },
                   ],
                 },
               },
@@ -142,7 +200,43 @@ const ProjectData = [
             contents: [
               {
                 main: {
-                  image: "/concept/1.png",
+                  customContent: (
+                    <Card
+                      projectName={"volunteering"}
+                      cards={[
+                        {
+                          heading: (
+                            <>
+                              Exploring <br /> the diverse world <br /> of Third
+                              Sector
+                            </>
+                          ),
+                          text: "Finding nonprofit organizations by location, social causes, type or size.",
+                          image: "/concept/icon0.svg",
+                        },
+                        {
+                          heading: (
+                            <>
+                              The right <br /> volunteer for <br /> the right
+                              activity
+                            </>
+                          ),
+                          text: "Volunteer activities focused on personal skills and preferences, with varying degrees of commitment.",
+                          image: "/concept/icon1.svg",
+                        },
+                        {
+                          heading: (
+                            <>
+                              Funding causes <br /> and efforts, <br /> not just
+                              projects
+                            </>
+                          ),
+                          text: "Inclusion of fundraising campaigns that aim to cover the certified expenses that organizations have to face.",
+                          image: "/concept/icon2.svg",
+                        },
+                      ]}
+                    />
+                  ),
                 },
               },
             ],
@@ -270,8 +364,8 @@ const ProjectData = [
                   text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
                 },
               },
-            ]
-          }
+            ],
+          },
         ],
       },
     ],

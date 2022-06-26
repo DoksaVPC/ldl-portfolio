@@ -1,6 +1,7 @@
 import Hero from "../components/details/Hero";
 import Carousel from "../components/shared/Carousel";
 import Wireframe from "../components/details/Wireframe";
+import Insight from "../components/details/Insight";
 
 function ProjectDetails({
   name,
@@ -57,7 +58,8 @@ function ProjectDetails({
           {highlights.map((item, index) => (
             <div
               className="details__overview-highlight container--flex u_flex-center"
-              key={item.title}>
+              key={item.title}
+            >
               <div className="details__main-content details__main-content--image">
                 <img
                   src={
@@ -92,7 +94,8 @@ function ProjectDetails({
                 {item.content.map((contentItem, index) => (
                   <li
                     className="details__summary-content-item"
-                    key={item.title + index}>
+                    key={item.title + index}
+                  >
                     {contentItem}
                   </li>
                 ))}
@@ -115,11 +118,13 @@ function ProjectDetails({
                 index !== chapter.sections.length - 1
                   ? "u_separator-bottom"
                   : ""
-              }`}>
+              }`}
+            >
               <div
                 className={`container--flex u_flex-baseline ${
                   section.headline ? "u_margin-bottom-xl" : "u_margin-bottom-xl"
-                }`}>
+                }`}
+              >
                 <h3 className="heading-tertiary">{section.title}</h3>
                 {section.headline && (
                   <div className="details__paragraph">
@@ -137,24 +142,49 @@ function ProjectDetails({
                   className={`container--flex u_flex-center ${
                     index !== section.contents.length - 1 && "u_margin-bottom-l"
                   }`}
-                  key={content.title}>
+                  key={content.title}
+                >
                   {content.main.carousel ? (
                     <div className="details__main-content">
                       <Carousel>
-                        {content.main.images.map((image, index) => (
-                          <picture className="carousel__item">   
-                          <source media="(max-width: 56.25em)" 
-                              srcset={
-                              process.env.PUBLIC_URL + "/images/" + name + image.split(".")[0] + "-portrait." + image.split(".")[1]
-                            }/>    
-                          <img
-                            src={
-                              process.env.PUBLIC_URL + "/images/" + name + image
-                            }
-                            alt={section.title + index}
-                          />
-                          </picture>
-                        ))}
+                        {content.main.images
+                          ? content.main.images.map((image, index) => (
+                              <picture className="carousel__item">
+                                <source
+                                  media="(max-width: 56.25em)"
+                                  srcSet={
+                                    process.env.PUBLIC_URL +
+                                    "/images/" +
+                                    name +
+                                    image.split(".")[0] +
+                                    "-portrait." +
+                                    image.split(".")[1]
+                                  }
+                                />
+                                <img
+                                  src={
+                                    process.env.PUBLIC_URL +
+                                    "/images/" +
+                                    name +
+                                    image
+                                  }
+                                  alt={section.title + index}
+                                />
+                              </picture>
+                            ))
+                          : content.main.insights
+                          ? content.main.insights.map((insight, index) => (
+                              <Insight
+                                projectName={name}
+                                index={index}
+                                mainText={insight.mainText}
+                                bodyText={insight.bodyText}
+                                image={insight.image}
+                                quote={insight.quote}
+                                key={"insight" + index}
+                              />
+                            ))
+                          : null}
                       </Carousel>
                     </div>
                   ) : content.main.wireframe ? (
@@ -163,6 +193,10 @@ function ProjectDetails({
                         projectName={name}
                         screens={content.main.screens}
                       />
+                    </div>
+                  ) : content.main.customContent ? (
+                    <div className="details__main-content">
+                      {content.main.customContent}
                     </div>
                   ) : (
                     <div className="details__main-content details__main-content--image">

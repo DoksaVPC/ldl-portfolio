@@ -25,6 +25,14 @@
       &:hover {
         transform: translate(-50%, -50%) scaleX(-0.8) scaleY(0.8);
       }
+
+      @include respond(phone) {
+        transform: translate(-30%, -50%) scaleX(-0.75) scaleY(0.75);
+
+      &:hover {
+        transform: translate(-30%, -50%) scaleX(-0.75) scaleY(0.75);
+      }
+      }
     }
 
     &--right {
@@ -33,6 +41,14 @@
 
       &:hover {
         transform: translate(50%, -50%) scale(0.8);
+      }
+
+      @include respond(phone) {
+        transform: translate(30%, -50%) scale(0.75);
+
+      &:hover {
+        transform: translate(30%, -50%) scale(0.75);
+      }
       }
     }
   }
@@ -72,17 +88,15 @@
 
   &__slider {
     width: 100%;
-    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
     transition: transform 0.25s cubic-bezier(0.3, 0, 0.3, 1);
     line-height: 0;
   }
 
   &__item {
-    width: 100%;
-    display: inline-block;
-
-    &:not(&:last-child) {
-      margin-right: 3.2rem;
-    }
+    flex-basis: 100%;
+    flex-shrink: 0;
   }
 }
