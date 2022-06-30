@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import ToggleButton from "../shared/ToggleButton";
 import WireframeScreen from "./WireframeScreen";
 
-function Wireframe({ projectName, screens }) {
+function Wireframe({ projectName }) {
   const [isMobile, setIsMobile] = useState(false);
 
   const changeVersion = () => {
@@ -13,19 +13,28 @@ function Wireframe({ projectName, screens }) {
     <div className="wireframe">
       <ToggleButton options={["Desktop", "Mobile"]} onToggle={changeVersion} />
       <div className="wireframe__container">
-        {screens.map((row, rowIndex) => (
-          <div className="wireframe__row" key={"wireframe row " + rowIndex}>
-            {row.map((screen, index) => (
-              <WireframeScreen
-                projectName={projectName}
-                index={index + rowIndex * 2}
-                interactions={screen.interactions}
-                isMobile={isMobile}
-                key={"wireframe" + index}
-              />
-            ))}
-          </div>
-        ))}
+        <img
+          src={
+            process.env.PUBLIC_URL +
+            "/images/" +
+            projectName +
+            "/wireframes/desktop.png"
+          }
+          alt={
+            "low-fidelity prototype of the desktop version of " + projectName
+          }
+          className={`wireframe__image ${!isMobile ? "u_visible" : "u_hidden"}`}
+        />
+        <img
+          src={
+            process.env.PUBLIC_URL +
+            "/images/" +
+            projectName +
+            "/wireframes/mobile.png"
+          }
+          alt={"low-fidelity prototype of the mobile version of " + projectName}
+          className={`wireframe__image ${isMobile ? "u_visible" : "u_hidden"}`}
+        />
       </div>
     </div>
   );

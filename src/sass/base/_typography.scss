@@ -6,7 +6,7 @@ html {
   &__main {
     display: block;
     font-size: 10rem;
-    line-height: 10.5rem;
+    line-height: 105%;
     font-family: $font-heading;
     font-weight: 800;
 
@@ -28,7 +28,7 @@ html {
     &--top {
       display: block;
       opacity: 0;
-      animation: moveInLeft 2s cubic-bezier(0.57, 0, 0, 1) 0.1s forwards;
+      animation: moveInLeft 1.5s cubic-bezier(0.5, 0, 0, 1) 0.1s forwards;
     }
 
     &--center {
@@ -38,7 +38,7 @@ html {
     &--bottom {
       display: block;
       opacity: 0;
-      animation: moveInRight 2s cubic-bezier(0.57, 0, 0, 1) 0.1s forwards;
+      animation: moveInRight 1.5s cubic-bezier(0.5, 0, 0, 1) 0.1s forwards;
     }
   }
 
@@ -51,7 +51,7 @@ html {
     font-weight: 600;
     color: $color-accent;
     opacity: 0;
-    animation: moveInTop 1.5s cubic-bezier(0.21, 0, 0, 0.99) 0.6s forwards;
+    animation: moveInTop 1.2s cubic-bezier(0.21, 0, 0, 0.99) 0.4s forwards;
   }
 }
 
@@ -108,7 +108,7 @@ html {
   text-transform: uppercase;
   font-size: 2rem;
   line-height: 120%;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.3rem;
   font-weight: 500;
   // padding-left: 1.6rem;
   position: relative;
@@ -200,5 +200,9 @@ html {
     transform: translateX(-60%) rotate(-135deg);
     bottom: 3%;
     left: 50%;
+  }
+
+  &--horizontal {
+    transform: rotate(-90deg);
   }
 }

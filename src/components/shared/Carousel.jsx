@@ -19,7 +19,7 @@ function Carousel({ children }) {
         <div
           className="carousel__slider"
           style={{
-            transform: `translateX(-${page * 100}% )`,
+            transform: `translateX(calc(-${page * 100}% - ${page * 1.6}rem))`,
           }}
         >
           {children}

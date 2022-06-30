@@ -97,22 +97,24 @@ function Hero({ name }) {
 
   return (
     <section className="details__hero" ref={containerRef}>
-      <img
-        src={
-          process.env.PUBLIC_URL +
-          "/images/volunteering/overview/hero-back.webp"
-        }
-        alt={"hero image background " + name}
-        ref={backgroundRef}
-      />
-      <img
-        src={
-          process.env.PUBLIC_URL +
-          "/images/volunteering/overview/hero-front.webp"
-        }
-        alt={"hero image foreground " + name}
-        ref={foregroundRef}
-      />
+      <div className="details__hero__container">
+        <img
+          src={
+            process.env.PUBLIC_URL +
+            "/images/volunteering/overview/hero-back.webp"
+          }
+          alt={"hero image background " + name}
+          ref={backgroundRef}
+        />
+        <img
+          src={
+            process.env.PUBLIC_URL +
+            "/images/volunteering/overview/hero-front.webp"
+          }
+          alt={"hero image foreground " + name}
+          ref={foregroundRef}
+        />
+      </div>
     </section>
   );
 }

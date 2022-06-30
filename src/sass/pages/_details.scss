@@ -11,7 +11,7 @@
     justify-content: center;
 
     .project__tag-list {
-      margin-top: 8rem;
+      margin-top: 6rem;
 
       opacity: 0;
       animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) forwards;
@@ -82,6 +82,10 @@
 
     @include respond(tab-port) {
       height: 80vh;
+    }
+
+    &__container {
+      transform: scale(1.2) translateY(20rem) rotate(-10deg);
     }
 
     img {
@@ -254,6 +258,44 @@
   }
 
   &__chapter-heading {
+    position: relative;
+    .waves {
+      position: absolute;
+      width: 220rem;
+      height: 220rem;
+      box-shadow: 0 1rem 4rem rgba($color-accent, 0.3);
+      left: 18.4rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 180rem;
+        height: 180rem;
+        box-shadow: 0 1rem 4rem rgba($color-accent, 0.3);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 120rem;
+        height: 120rem;
+        box-shadow: 0 1rem 4rem rgba($color-accent, 0.3);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+      }
+    }
+
     .container {
       display: flex;
       align-items: center;
@@ -264,6 +306,7 @@
     background-color: $color-accent-light;
     padding: 6.4rem 0;
     margin: 12rem 0;
+    overflow: hidden;
   }
 }
 
@@ -280,10 +323,15 @@
   }
 
   &__heading {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+    margin-top: 4.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    @include respond(tab-land) {
+      font-size: 2.2rem;
+    }
   }
 
   &__heading-number {
@@ -307,20 +355,25 @@
     }
   }
 
+  &__list {
+  }
+
   &__list-item {
-    margin-left: 1rem;
     display: flex;
     gap: 2.4rem;
-    font-size: 1.8rem;
     line-height: 160%;
     letter-spacing: 0.02rem;
     &:not(&:last-child) {
       margin-bottom: 2.4rem;
     }
-  }
 
-  .arrow {
-    transform: rotate(-90deg);
-    flex-shrink: 0;
+    strong {
+      font-weight: 500;
+    }
+
+    font-size: 2rem;
+    @include respond(tab-land) {
+      font-size: 2.2rem;
+    }
   }
 }

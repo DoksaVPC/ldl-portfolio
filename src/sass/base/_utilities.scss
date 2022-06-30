@@ -108,3 +108,14 @@
   margin-bottom: 6.4rem;
   //border-bottom: 1px $color-grey-light solid;
 }
+
+.u_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.u_hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}

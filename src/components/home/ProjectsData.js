@@ -78,59 +78,44 @@ const ProjectData = [
             title: "user interviews",
             headline:
               "Understanding the organizations' main needs and discovering motivations and goals behind different types of volunteers",
-            paragraph:
-              "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
-            contents: [
-              {
-                main: {
-                  customContent: (
-                    <>
-                      <div className="fact">
-                        <h5 className="fact__heading">
-                          <span className="fact__heading-number">10</span>
-                          <span className="fact__heading-text">Interviews</span>
-                        </h5>
-                        <ul>
-                          <li className="fact__list-item">
-                            <div className="arrow"></div>
-                            <p>
-                              5 di sesso <strong>femminile</strong>, 5 di sesso{" "}
-                              <strong>maschile</strong>
-                            </p>
-                          </li>
-                          <li className="fact__list-item">
-                            <div className="arrow"></div>
-                            <p>
-                              Tra i <strong>25</strong> e i <strong>75</strong>{" "}
-                              anni
-                            </p>
-                          </li>
-                          <li className="fact__list-item">
-                            <div className="arrow"></div>
-                            <p>
-                              Residenti in <strong>diverse regioni</strong>{" "}
-                              italiane
-                            </p>
-                          </li>
-                          <li className="fact__list-item">
-                            <div className="arrow"></div>
-                            <p>
-                              Che ricoprono <strong>diversi ruoli</strong> in
-                              organizzazioni non profit: coordinatori,
-                              dipendenti, volontari, volontari occasionali
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </>
-                  ),
-                },
-                support: {
-                  title: "Interviews with artists",
-                  text: "Digital concerts made easy, accessible and social experiences worth to pay for.",
-                },
-              },
-            ],
+            paragraph: (
+              <>
+                It is to provide the audience with an interactive and accessible
+                experience. We want to make again the live concert a social
+                experience that is worth to pay for, even in this period of
+                social distancing.
+                <h5 className="fact__heading">10 interviewees</h5>
+                <ul className="fact__list">
+                  <li className="fact__list-item">
+                    <div className="arrow arrow--horizontal"></div>
+                    <p>
+                      5 di sesso <strong>femminile</strong>, 5 di sesso{" "}
+                      <strong>maschile</strong>
+                    </p>
+                  </li>
+                  <li className="fact__list-item">
+                    <div className="arrow arrow--horizontal"></div>
+                    <p>
+                      Tra i <strong>25</strong> e i <strong>75</strong> anni
+                    </p>
+                  </li>
+                  <li className="fact__list-item">
+                    <div className="arrow arrow--horizontal"></div>
+                    <p>
+                      Residenti in <strong>diverse regioni</strong> italiane
+                    </p>
+                  </li>
+                  <li className="fact__list-item">
+                    <div className="arrow arrow--horizontal"></div>
+                    <p>
+                      Che ricoprono <strong>diversi ruoli</strong> in
+                      organizzazioni non profit: coordinatori, dipendenti,
+                      volontari, volontari occasionali
+                    </p>
+                  </li>
+                </ul>
+              </>
+            ),
           },
           {
             title: "user insights",
@@ -141,19 +126,50 @@ const ProjectData = [
                   insights: [
                     {
                       mainText:
-                        "Main headline summarizing the insight, telling about an issue that emerged while i was interviewing people.",
+                        "Many nonprofit organizations report a lack of expertise within the sector and a rising need for specialized professionals among volunteers.",
                       bodyText:
                         "A more in-depth explaination of the issue, highlighting some opportunities of intervento. Giusto tre o quattro righe che diano un contesto.",
-                      image: "/insights/0.png",
+                      image: "/insights/0.webp",
                       quote: {
                         text: "ciao questa è una citazione.",
                         author: "Michele, 48",
                       },
                     },
                     {
-                      mainText: "ciao",
+                      mainText:
+                        "A major struggle for many organizations is to find volunteers interested in crucial back-office activities.",
                       bodyText: "ciao ciao",
-                      image: null,
+                      image: "/insights/1.webp",
+                      quote: {
+                        text: "ciao questa è una citazione.",
+                        author: "Michele, 48",
+                      },
+                    },
+                    {
+                      mainText:
+                        "Organizations are increasingly relying on the joint employment of professional workers and volunteers, focusing on the training of the latter.",
+                      bodyText: "ciao ciao",
+                      image: "/insights/2.webp",
+                      quote: {
+                        text: "ciao questa è una citazione.",
+                        author: "Michele, 48",
+                      },
+                    },
+                    {
+                      mainText:
+                        "The volunteer modes, especially among young people, are varied, often occasional, and no longer anchored to traditional patterns.",
+                      bodyText: "ciao ciao",
+                      image: "/insights/3.webp",
+                      quote: {
+                        text: "ciao questa è una citazione.",
+                        author: "Michele, 48",
+                      },
+                    },
+                    {
+                      mainText:
+                        "Most of the economic resources are used by institutions to cover their operating expenses, but the main funding options are directed to specific projects.",
+                      bodyText: "ciao ciao",
+                      image: "/insights/4.webp",
                       quote: {
                         text: "ciao questa è una citazione.",
                         author: "Michele, 48",
@@ -194,7 +210,7 @@ const ProjectData = [
           {
             title: "concept definition",
             headline:
-              "Developing a platform meeting the goals and needs of organizations and volunteers",
+              "A web platform where organizations' needs meet supporters' goals",
             paragraph:
               "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
             contents: [
@@ -308,24 +324,6 @@ const ProjectData = [
               {
                 main: {
                   wireframe: true,
-                  screens: [
-                    [
-                      {
-                        interactions: [],
-                      },
-                      {
-                        interactions: [],
-                      },
-                    ],
-                    [
-                      {
-                        interactions: [],
-                      },
-                      {
-                        interactions: [],
-                      },
-                    ],
-                  ],
                 },
               },
             ],

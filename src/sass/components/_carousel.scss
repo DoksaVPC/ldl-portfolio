@@ -29,9 +29,9 @@
       @include respond(phone) {
         transform: translate(-30%, -50%) scaleX(-0.75) scaleY(0.75);
 
-      &:hover {
-        transform: translate(-30%, -50%) scaleX(-0.75) scaleY(0.75);
-      }
+        &:hover {
+          transform: translate(-30%, -50%) scaleX(-0.75) scaleY(0.75);
+        }
       }
     }
 
@@ -46,9 +46,9 @@
       @include respond(phone) {
         transform: translate(30%, -50%) scale(0.75);
 
-      &:hover {
-        transform: translate(30%, -50%) scale(0.75);
-      }
+        &:hover {
+          transform: translate(30%, -50%) scale(0.75);
+        }
       }
     }
   }
@@ -93,6 +93,7 @@
     align-items: stretch;
     transition: transform 0.25s cubic-bezier(0.3, 0, 0.3, 1);
     line-height: 0;
+    gap: 1.6rem;
   }
 
   &__item {

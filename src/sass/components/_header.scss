@@ -10,4 +10,30 @@
     position: relative;
     z-index: 2;
   }
+
+  &__circle {
+    position: absolute;
+    box-shadow: 0 2rem 6.4rem rgba($color-primary, .2);
+    border-radius: 100%;
+    width: 70vw;
+    height: 70vw;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: waves 2s ease-out;
+
+    &--first {
+      animation-delay: .3s;
+    }
+
+    &--second {
+      animation-delay: .6s;
+    }
+
+    &--third {
+      animation-delay: .9s;
+    }
+  }
 }

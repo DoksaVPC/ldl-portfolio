@@ -107,6 +107,7 @@ function ProjectDetails({
       {chapters.map((chapter, index) => (
         <section>
           <div className="details__chapter-heading">
+            <div className="waves"></div>
             <div className="container">
               <p className="heading-secondary--number">0{index + 1}</p>
               <h2 className="heading-secondary">{chapter.title}</h2>
@@ -122,7 +123,11 @@ function ProjectDetails({
             >
               <div
                 className={`container--flex u_flex-baseline ${
-                  section.headline ? "u_margin-bottom-xl" : "u_margin-bottom-xl"
+                  !section.contents
+                    ? ""
+                    : section.headline
+                    ? "u_margin-bottom-xl"
+                    : "u_margin-bottom-xl"
                 }`}
               >
                 <h3 className="heading-tertiary">{section.title}</h3>
@@ -137,91 +142,95 @@ function ProjectDetails({
                   </div>
                 )}
               </div>
-              {section.contents.map((content, index) => (
-                <div
-                  className={`container--flex u_flex-center ${
-                    index !== section.contents.length - 1 && "u_margin-bottom-l"
-                  }`}
-                  key={content.title}
-                >
-                  {content.main.carousel ? (
-                    <div className="details__main-content">
-                      <Carousel>
-                        {content.main.images
-                          ? content.main.images.map((image, index) => (
-                              <picture className="carousel__item">
-                                <source
-                                  media="(max-width: 56.25em)"
-                                  srcSet={
-                                    process.env.PUBLIC_URL +
-                                    "/images/" +
-                                    name +
-                                    image.split(".")[0] +
-                                    "-portrait." +
-                                    image.split(".")[1]
-                                  }
+              {section.contents &&
+                section.contents.map((content, index) => (
+                  <div
+                    className={`${
+                      content.support ? "container--flex u_flex-center" : ""
+                    } ${
+                      index !== section.contents.length - 1
+                        ? "u_margin-bottom-l"
+                        : ""
+                    }`}
+                    key={content.title}
+                  >
+                    {content.main.carousel ? (
+                      <div className="details__main-content">
+                        <Carousel>
+                          {content.main.images
+                            ? content.main.images.map((image, index) => (
+                                <picture className="carousel__item">
+                                  <source
+                                    media="(max-width: 56.25em)"
+                                    srcSet={
+                                      process.env.PUBLIC_URL +
+                                      "/images/" +
+                                      name +
+                                      image.split(".")[0] +
+                                      "-portrait." +
+                                      image.split(".")[1]
+                                    }
+                                  />
+                                  <img
+                                    src={
+                                      process.env.PUBLIC_URL +
+                                      "/images/" +
+                                      name +
+                                      image
+                                    }
+                                    alt={section.title + index}
+                                  />
+                                </picture>
+                              ))
+                            : content.main.insights
+                            ? content.main.insights.map((insight, index) => (
+                                <Insight
+                                  projectName={name}
+                                  index={index}
+                                  mainText={insight.mainText}
+                                  bodyText={insight.bodyText}
+                                  image={insight.image}
+                                  quote={insight.quote}
+                                  key={"insight" + index}
                                 />
-                                <img
-                                  src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/" +
-                                    name +
-                                    image
-                                  }
-                                  alt={section.title + index}
-                                />
-                              </picture>
-                            ))
-                          : content.main.insights
-                          ? content.main.insights.map((insight, index) => (
-                              <Insight
-                                projectName={name}
-                                index={index}
-                                mainText={insight.mainText}
-                                bodyText={insight.bodyText}
-                                image={insight.image}
-                                quote={insight.quote}
-                                key={"insight" + index}
-                              />
-                            ))
-                          : null}
-                      </Carousel>
-                    </div>
-                  ) : content.main.wireframe ? (
-                    <div className="details__main-content">
-                      <Wireframe
-                        projectName={name}
-                        screens={content.main.screens}
-                      />
-                    </div>
-                  ) : content.main.customContent ? (
-                    <div className="details__main-content">
-                      {content.main.customContent}
-                    </div>
-                  ) : (
-                    <div className="details__main-content details__main-content--image">
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/" +
-                          name +
-                          content.main.image
-                        }
-                        alt={"overview" + index}
-                      />
-                    </div>
-                  )}
+                              ))
+                            : null}
+                        </Carousel>
+                      </div>
+                    ) : content.main.wireframe ? (
+                      <div className="details__main-content">
+                        <Wireframe projectName={name} />
+                      </div>
+                    ) : content.main.customContent ? (
+                      <div className="details__main-content">
+                        {content.main.customContent}
+                      </div>
+                    ) : (
+                      <div className="details__main-content details__main-content--image">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/images/" +
+                            name +
+                            content.main.image
+                          }
+                          alt={"overview" + index}
+                        />
+                      </div>
+                    )}
 
-                  {content.support && (
-                    <div className="details__support-content">
-                      <h5 className="heading-five">{content.support.title}</h5>
-                      <p className="body-text body-text--small">
-                        {content.support.text}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    {content.support && (
+                      <div className="details__support-content">
+                        <h5 className="heading-five">
+                          {content.support.title}
+                        </h5>
+                        <p className="body-text body-text--small">
+                          {content.support.text}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
             </div>
           ))}
         </section>

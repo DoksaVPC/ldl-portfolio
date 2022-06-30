@@ -10,7 +10,7 @@ function Header() {
               </span>
               <span className="heading-primary__main u_margin-top-l">
                 <span className="heading-primary__main--top">
-                  UX/UI designer
+                  Product designer
                 </span>
                 <span className="heading-primary__main--center u_show-on-tab">
                   &amp;
@@ -23,6 +23,9 @@ function Header() {
             </h1>
           </header>
         </div>
+        <div className="header__circle header__circle--first"></div>
+        <div className="header__circle header__circle--second"></div>
+        <div className="header__circle header__circle--third"></div>
       </div>
       <section className="section-introduction">
         <div className="container container-introduction">
