@@ -18,6 +18,10 @@ $gutter-width-small: 4.8rem;
     display: flex;
     flex-wrap: wrap;
     gap: $gutter-width;
+
+    &.u_flex-baseline {
+      gap: $gutter-width-small;
+    }
   }
 }
 

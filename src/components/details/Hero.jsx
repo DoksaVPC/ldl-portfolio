@@ -24,28 +24,34 @@ function Hero({ name }) {
     animationStateRef.current.containerY = dimensions.y + window.scrollY;
   }, []);
 
-  useEffect(() => {
-    const updateMousePosition = (e) => {
-      let centerX = window.innerWidth / 2;
-      let centerY =
-        animationStateRef.current.containerY -
-        window.scrollY +
-        animationStateRef.current.containerHeight / 2;
-      animationStateRef.current.mouseX =
-        (e.x - centerX) / (window.innerWidth / 2);
-      animationStateRef.current.mouseY =
-        (e.y - centerY) / (animationStateRef.current.containerHeight / 2);
-    };
-    window.addEventListener("mousemove", updateMousePosition);
+  // useEffect(() => {
+  //   const updateMousePosition = (e) => {
+  //     let centerX = window.innerWidth / 2;
+  //     let centerY =
+  //       animationStateRef.current.containerY -
+  //       window.scrollY +
+  //       animationStateRef.current.containerHeight / 2;
+  //     animationStateRef.current.mouseX =
+  //       (e.x - centerX) / (window.innerWidth / 2);
+  //     animationStateRef.current.mouseY =
+  //       (e.y - centerY) / (animationStateRef.current.containerHeight / 2);
+  //   };
+  //   window.addEventListener("mousemove", updateMousePosition);
 
-    return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("mousemove", updateMousePosition);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const updateScrollPosition = () => {
-      animationStateRef.current.scrollY = window.scrollY / window.innerHeight;
+      if (
+        window.scrollY <
+        animationStateRef.current.containerY +
+          animationStateRef.current.containerHeight
+      ) {
+        animationStateRef.current.scrollY = window.scrollY / window.innerHeight;
+      }
     };
     document.addEventListener("scroll", updateScrollPosition);
 
@@ -61,33 +67,28 @@ function Hero({ name }) {
       let { mouseX, mouseY, scrollY, targetX, targetY, distanceX, distanceY } =
         animationStateRef.current;
 
-      if (!targetX | !targetY) {
+      animationStateRef.current.distanceX = (mouseX - targetX) * 0.1;
+      animationStateRef.current.distanceY =
+        (mouseY + scrollY * 4 - targetY) * 0.1;
+
+      if (
+        Math.abs(animationStateRef.current.distanceX) +
+          Math.abs(animationStateRef.current.distanceY) <
+        0.0001
+      ) {
         animationStateRef.current.targetX = mouseX;
         animationStateRef.current.targetY = mouseY + scrollY * 4;
       } else {
-        animationStateRef.current.distanceX = (mouseX - targetX) * 0.1;
-        animationStateRef.current.distanceY =
-          (mouseY + scrollY * 4 - targetY) * 0.1;
-
-        if (
-          Math.abs(animationStateRef.current.distanceX) +
-            Math.abs(animationStateRef.current.distanceY) <
-          0.0001
-        ) {
-          animationStateRef.current.targetX = mouseX;
-          animationStateRef.current.targetY = mouseY + scrollY * 4;
-        } else {
-          animationStateRef.current.targetX += distanceX;
-          animationStateRef.current.targetY += distanceY;
-        }
+        animationStateRef.current.targetX += distanceX;
+        animationStateRef.current.targetY += distanceY;
       }
 
       backgroundRef.current.style.transform = `translate(${
         -50 - animationStateRef.current.targetX * 1.6
-      }%, ${-40 - animationStateRef.current.targetY * 1.8}%)`;
+      }%, ${-35 - animationStateRef.current.targetY * 1.8}%)`;
       foregroundRef.current.style.transform = `translate(${
         -50 - animationStateRef.current.targetX * 2.25
-      }%, ${-45 - animationStateRef.current.targetY * 3.2}%)`;
+      }%, ${-30 - animationStateRef.current.targetY * 3.2}%)`;
     };
 
     followCursor();
@@ -101,7 +102,9 @@ function Hero({ name }) {
         <img
           src={
             process.env.PUBLIC_URL +
-            "/images/volunteering/overview/hero-back.webp"
+            "/images/" +
+            name +
+            "/overview/hero-back.webp"
           }
           alt={"hero image background " + name}
           ref={backgroundRef}
@@ -109,7 +112,9 @@ function Hero({ name }) {
         <img
           src={
             process.env.PUBLIC_URL +
-            "/images/volunteering/overview/hero-front.webp"
+            "/images/" +
+            name +
+            "/overview/hero-front.webp"
           }
           alt={"hero image foreground " + name}
           ref={foregroundRef}

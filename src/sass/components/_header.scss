@@ -13,8 +13,9 @@
 
   &__circle {
     position: absolute;
-    box-shadow: 0 2rem 6.4rem rgba($color-primary, .2);
+    //box-shadow: 0 2rem 6.4rem rgba($color-primary, 0.2);
     border-radius: 100%;
+    border: 2px $color-accent-light solid;
     width: 70vw;
     height: 70vw;
     z-index: -10;
@@ -22,18 +23,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    animation: waves 2s ease-out;
+    animation: waves 3s cubic-bezier(0, 0, 0.16, 0.99);
 
     &--first {
-      animation-delay: .3s;
+      animation-delay: 0.4s;
     }
 
     &--second {
-      animation-delay: .6s;
+      animation-delay: 0.7s;
     }
 
     &--third {
-      animation-delay: .9s;
+      animation-delay: 1s;
     }
   }
 }

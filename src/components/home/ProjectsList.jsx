@@ -99,15 +99,17 @@ function ProjectsList() {
   }, []);
 
   const projectsListItems = ProjectData;
+
   return (
     <div className="projects-list">
-      {projectsListItems.map((item, index) => (
+      {projectsListItems.projectsList.map((item, index) => (
         <ProjectsItem
-          key={index}
-          name={item.name}
-          text={item.text}
-          tags={item.tags}
-          image={item.image}
+          key={item}
+          id={item}
+          name={projectsListItems[item].name}
+          text={projectsListItems[item].text}
+          tags={projectsListItems[item].tags}
+          image={projectsListItems[item].image}
           handleHover={handleHover}
         />
       ))}

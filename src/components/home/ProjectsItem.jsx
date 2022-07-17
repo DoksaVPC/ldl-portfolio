@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function ProjectsItem({ name, image, text, tags, handleHover }) {
+function ProjectsItem({ id, name, image, text, tags, handleHover }) {
   const onOver = (hovering) => {
     handleHover(hovering);
   };
@@ -10,7 +10,7 @@ function ProjectsItem({ name, image, text, tags, handleHover }) {
       <div className="flex-column">
         <h4 className="project__name u_show-on-mobile">{name}</h4>
         <Link
-          to="/project"
+          to={"/project/" + id}
           className="project__image-box"
           onMouseEnter={() => onOver(true)}
           onMouseOut={() => onOver(false)}>

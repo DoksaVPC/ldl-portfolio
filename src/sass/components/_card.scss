@@ -48,8 +48,8 @@
 
   &__heading {
     font-size: 2rem;
-    font-weight: 700;
-    color: rgba($color-primary, 0.95);
+    font-weight: 600;
+    color: rgba($color-primary, 0.9);
     margin-bottom: 2.4rem;
 
     @include respond(tab-port) {
