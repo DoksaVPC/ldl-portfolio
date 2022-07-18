@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fb6f848c.css",
-    "main.js": "/static/js/main.82df61e3.js",
+    "main.js": "/static/js/main.80b9edcf.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
     "static/media/cover.webp": "/static/media/cover.ebf587d76f6d4e632aa0.webp",
@@ -17,11 +17,11 @@
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
     "main.fb6f848c.css.map": "/static/css/main.fb6f848c.css.map",
-    "main.82df61e3.js.map": "/static/js/main.82df61e3.js.map",
+    "main.80b9edcf.js.map": "/static/js/main.80b9edcf.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb6f848c.css",
-    "static/js/main.82df61e3.js"
+    "static/js/main.80b9edcf.js"
   ]
 }
