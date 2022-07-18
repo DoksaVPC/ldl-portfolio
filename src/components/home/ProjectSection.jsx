@@ -8,9 +8,9 @@ function ProjectSection() {
           Featured projects <div className="arrow arrow--inline"></div>
         </h2>
         <ProjectsList />
-        <h2 className="heading-secondary heading-secondary--bold heading-secondary--arrow u_margin-bottom-xxl">
+        {/* <h2 className="heading-secondary heading-secondary--bold heading-secondary--arrow u_margin-bottom-xxl">
           Other projects <div className="arrow arrow--inline"></div>
-        </h2>
+        </h2> */}
       </div>
     </section>
   );

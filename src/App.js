@@ -8,6 +8,7 @@ import introAnimation from "./assets/intro_animation.json";
 import ScrollToTop from "./components/ScrollToTop";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/shared/Footer";
 
 function App() {
   const [isIntroComplete, setIsIntroComplete] = useState(false);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/project/:projectId" element={<ProjectDetails />} />
       </Routes>
       <ScrollToTop />
+      <Footer />
     </Router>
   );
 }

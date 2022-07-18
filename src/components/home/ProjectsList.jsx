@@ -102,17 +102,6 @@ function ProjectsList() {
 
   return (
     <div className="projects-list">
-      {projectsListItems.projectsList.map((item, index) => (
-        <ProjectsItem
-          key={item}
-          id={item}
-          name={projectsListItems[item].name}
-          text={projectsListItems[item].text}
-          tags={projectsListItems[item].tags}
-          image={projectsListItems[item].image}
-          handleHover={handleHover}
-        />
-      ))}
       <div className="exploreBubble" ref={bubbleRef}>
         <div
           className={`exploreBubble__content ${
@@ -126,6 +115,17 @@ function ProjectsList() {
           <span>Explore</span>
         </div>
       </div>
+      {projectsListItems.projectsList.map((item, index) => (
+        <ProjectsItem
+          key={item}
+          id={item}
+          name={projectsListItems[item].name}
+          text={projectsListItems[item].text}
+          tags={projectsListItems[item].tags}
+          image={projectsListItems[item].image}
+          handleHover={handleHover}
+        />
+      ))}
     </div>
   );
 }

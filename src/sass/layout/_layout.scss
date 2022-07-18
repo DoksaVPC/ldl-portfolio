@@ -36,3 +36,23 @@ $gutter-width-small: 4.8rem;
 .single-column {
   @include column(1);
 }
+
+.footer {
+  font-size: 1.6rem;
+  padding: 8rem 0;
+  text-align: center;
+  border-top: 1px solid $color-grey-light;
+
+  &__phone,
+  &__email {
+  }
+
+  &__email {
+    margin-top: 1.6rem;
+  }
+
+  &__copyright {
+    margin-top: 1.6rem;
+    color: rgba($color-primary, 0.8);
+  }
+}

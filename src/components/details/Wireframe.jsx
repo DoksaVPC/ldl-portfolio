@@ -18,7 +18,7 @@ function Wireframe({ projectName }) {
             process.env.PUBLIC_URL +
             "/images/" +
             projectName +
-            "/wireframes/desktop.png"
+            "/wireframes/desktop.webp"
           }
           alt={
             "low-fidelity prototype of the desktop version of " + projectName
@@ -30,7 +30,7 @@ function Wireframe({ projectName }) {
             process.env.PUBLIC_URL +
             "/images/" +
             projectName +
-            "/wireframes/mobile.png"
+            "/wireframes/mobile.webp"
           }
           alt={"low-fidelity prototype of the mobile version of " + projectName}
           className={`wireframe__image ${isMobile ? "u_visible" : "u_hidden"}`}

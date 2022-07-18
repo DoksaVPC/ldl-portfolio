@@ -168,9 +168,10 @@ html {
 
 .body-text {
   font-size: 2rem;
-  margin-top: 4.8rem;
+  margin-top: 1.6rem;
+
   font-weight: 300;
-  line-height: 150%;
+  line-height: 160%;
   letter-spacing: 0.02em;
 
   @include respond(tab-land) {

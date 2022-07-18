@@ -31,8 +31,53 @@
 
   &__list-item {
     display: inline-block;
+    position: relative;
     &:not(&:last-child) {
-      padding-right: 4rem;
+      margin-right: 4rem;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 16px;
+      background-color: $color-accent;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      bottom: -0.4rem;
+      transition: transform 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 16px;
+        background-color: $color-accent;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scaleX(1);
+        bottom: -0.4rem;
+      }
+    }
+
+    &--active,
+    &--active:hover {
+      &::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: unset;
+        background-color: $color-accent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -0.4rem;
+        transform: translateX(0) scaleX(1);
+        transition: none;
+      }
     }
   }
 

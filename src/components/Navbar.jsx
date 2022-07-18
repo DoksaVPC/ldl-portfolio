@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/img/ldl-logo.svg";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const addBackgroundOnScroll = () => {
@@ -31,19 +33,20 @@ function Navbar() {
         />
       </div>
       <ul className="navbar__list u_show-on-desktop">
-        <li className="navbar__list-item">
-          <Link to="/about" className="navbar__link">
-            About
-          </Link>
-        </li>
-        <li className="navbar__list-item">
+        <li
+          className={`navbar__list-item ${
+            location.pathname === "/" ? "navbar__list-item--active" : ""
+          }`}>
           <Link to="/" className="navbar__link">
             Portfolio
           </Link>
         </li>
-        <li className="navbar__list-item">
-          <Link to="/" className="navbar__link">
-            Contacts
+        <li
+          className={`navbar__list-item ${
+            location.pathname === "/about" ? "navbar__list-item--active" : ""
+          }`}>
+          <Link to="/about" className="navbar__link">
+            About
           </Link>
         </li>
       </ul>

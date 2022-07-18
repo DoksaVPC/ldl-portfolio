@@ -1,0 +1,29 @@
+.about {
+  padding: 12rem 0;
+
+  &__photo-box {
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: $color-primary;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+  }
+
+  .details__main-content {
+    align-items: flex-start;
+    font-size: 2.2rem;
+    gap: unset;
+  }
+
+  .details__support-content {
+    &::before {
+      display: none;
+    }
+  }
+}

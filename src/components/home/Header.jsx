@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <>
@@ -38,14 +40,17 @@ function Header() {
                 <strong>motion graphics</strong>.
               </p>
               <p className="introduction__paragraph">
-                My work is driven by <strong>enthusiasm</strong> and curiosity
-                towards <strong>technology</strong> as a{" "}
-                <strong>creative tool</strong>, and by passion in exploring the
-                ways in which humans can <strong>interact</strong> with it.
+                My work is driven by <strong>enthusiasm</strong> and{" "}
+                <strong>curiosity</strong> towards <strong>technology</strong>{" "}
+                as a <strong>creative tool</strong>, and a desire to explore
+                ways in which it can help <strong>solve real problems</strong>{" "}
+                in people's lives.
               </p>
-              <span className="button button--link button--primary u_margin-top-l">
-                See my resume &rarr;
-              </span>
+              <Link to="/about">
+                <span className="button button--link button--primary u_margin-top-l">
+                  More about me &rarr;
+                </span>
+              </Link>
             </div>
           </div>
         </div>

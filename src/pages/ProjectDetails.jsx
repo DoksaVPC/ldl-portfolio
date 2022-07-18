@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import Hero from "../components/details/Hero";
 import Carousel from "../components/shared/Carousel";
@@ -59,7 +59,13 @@ function ProjectDetails() {
             <h4 className="heading-four u_margin-bottom-m">
               {overview.headline}
             </h4>
-            <p className="body-text">{overview.paragraph}</p>
+            <div className="u_margin-top-ml">
+              {overview.paragraph.map((item) => (
+                <p className="body-text" key={item}>
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
         <div className="container">
@@ -150,7 +156,13 @@ function ProjectDetails() {
                         {section.headline}
                       </h4>
                       {section.paragraph && (
-                        <p className="body-text">{section.paragraph}</p>
+                        <div className="u_margin-top-ml">
+                          {section.paragraph.map((item) => (
+                            <p className="body-text" key={item}>
+                              {item}
+                            </p>
+                          ))}
+                        </div>
                       )}
                     </div>
                   )}
@@ -173,18 +185,7 @@ function ProjectDetails() {
                           <Carousel>
                             {content.main.images
                               ? content.main.images.map((image, index) => (
-                                  <picture className="carousel__item">
-                                    <source
-                                      media="(max-width: 56.25em)"
-                                      srcSet={
-                                        process.env.PUBLIC_URL +
-                                        "/images/" +
-                                        params.projectId +
-                                        image.split(".")[0] +
-                                        "-portrait." +
-                                        image.split(".")[1]
-                                      }
-                                    />
+                                  <div className="carousel__item">
                                     <img
                                       src={
                                         process.env.PUBLIC_URL +
@@ -192,9 +193,9 @@ function ProjectDetails() {
                                         params.projectId +
                                         image
                                       }
-                                      alt={section.title + index}
+                                      alt={"picture" + index}
                                     />
-                                  </picture>
+                                  </div>
                                 ))
                               : content.main.insights
                               ? content.main.insights.map((insight, index) => (
@@ -259,14 +260,20 @@ function ProjectDetails() {
           </section>
         ))}
       </div>
-      <section className="details__conclusions">
+      <div className="details__link-container">
+        <Link to="/" className="details__link">
+          &larr; Back to projects
+        </Link>
+      </div>
+
+      {/* <section className="details__conclusions">
         <div className="container">
           <h2 className="heading-secondary">Conclusions</h2>
           <p className="body-text body-text--big" style={{ textAlign: "left" }}>
             {conclusions}
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

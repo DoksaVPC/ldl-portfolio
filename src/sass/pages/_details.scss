@@ -381,6 +381,18 @@
   &__video {
     border-radius: 2.4rem;
   }
+
+  &__link-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    color: $color-primary;
+    border-bottom: 4px solid $color-accent;
+    padding: 0.4rem 0;
+  }
 }
 
 .fact {
