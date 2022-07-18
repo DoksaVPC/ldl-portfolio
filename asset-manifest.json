@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb6f848c.css",
-    "main.js": "/static/js/main.80b9edcf.js",
+    "main.css": "/static/css/main.0b06976d.css",
+    "main.js": "/static/js/main.7d5cd649.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
     "static/media/cover.webp": "/static/media/cover.ebf587d76f6d4e632aa0.webp",
@@ -9,19 +9,17 @@
     "static/media/stan-wars.png": "/static/media/stan-wars.98053f1d60ff4ffa3360.png",
     "static/media/picture.webp": "/static/media/picture.9cc552b5356885e0a630.webp",
     "static/media/paolamirai.webp": "/static/media/paolamirai.2cfe9f76d0e987196257.webp",
-    "static/media/ldl-logo.svg": "/static/media/ldl-logo.004011b444a9dd6eb9dea4770688787d.svg",
-    "static/media/wireframe_desktop.svg": "/static/media/wireframe_desktop.06b18e26ffdf57faaf7851939d738c78.svg",
-    "static/media/wireframe_mobile.svg": "/static/media/wireframe_mobile.abb8c2995e28e9dfd19b046643e43061.svg",
     "index.html": "/index.html",
     "static/media/pros.svg": "/static/media/pros.1c9ad9ff3cf3d727af7e92b37d77f982.svg",
+    "static/media/ldl-logo.svg": "/static/media/ldl-logo.52f04a95ba0d9cf3f4ce3e95f173754a.svg",
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
-    "main.fb6f848c.css.map": "/static/css/main.fb6f848c.css.map",
-    "main.80b9edcf.js.map": "/static/js/main.80b9edcf.js.map",
+    "main.0b06976d.css.map": "/static/css/main.0b06976d.css.map",
+    "main.7d5cd649.js.map": "/static/js/main.7d5cd649.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb6f848c.css",
-    "static/js/main.80b9edcf.js"
+    "static/css/main.0b06976d.css",
+    "static/js/main.7d5cd649.js"
   ]
 }
