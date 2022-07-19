@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b06976d.css",
-    "main.js": "/static/js/main.7d5cd649.js",
+    "main.css": "/static/css/main.0700d254.css",
+    "main.js": "/static/js/main.824cac89.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
     "static/media/cover.webp": "/static/media/cover.ebf587d76f6d4e632aa0.webp",
@@ -14,12 +14,12 @@
     "static/media/ldl-logo.svg": "/static/media/ldl-logo.52f04a95ba0d9cf3f4ce3e95f173754a.svg",
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
-    "main.0b06976d.css.map": "/static/css/main.0b06976d.css.map",
-    "main.7d5cd649.js.map": "/static/js/main.7d5cd649.js.map",
+    "main.0700d254.css.map": "/static/css/main.0700d254.css.map",
+    "main.824cac89.js.map": "/static/js/main.824cac89.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b06976d.css",
-    "static/js/main.7d5cd649.js"
+    "static/css/main.0700d254.css",
+    "static/js/main.824cac89.js"
   ]
 }
