@@ -387,7 +387,8 @@ const ProjectData = {
             headline:
               "From Figma to code: building a highly realistic prototype in React",
             paragraph: [
-              "It is to provide the audience with an interactive and accessible experience. We want to make again the live concert a social experience that is worth to pay for, even in this period of social distancing.",
+              "After creating an initial high-fidelity prototype with Figma, I coded a more advanced one using the React javascript library.",
+              "This resulted in an extremely realistic prototype, which makes it possible to have users test features such as adding and editing data or applying search filters.",
             ],
 
             contents: [
@@ -488,7 +489,7 @@ const ProjectData = {
       paragraph: [
         "When I was looking for a curricular internship experience, the owner of a jewelry design studio contacted me to design and develop an innovative digital product that would support her business.",
         "The final outcome was an app that allowed users to visualize 3D models of the jewels and try them using augmented reality.",
-        "The project went on for some more months after the end of the internship program as a contract freelance work and culminated with the shipping of a working demo of the app on the stores.",
+        "The project went on for some more months after the end of the internship program as a freelance contract work and culminated with the shipping of a working demo of the app on the stores.",
       ],
     },
     highlights: [
@@ -537,7 +538,7 @@ const ProjectData = {
               </>
             ),
             paragraph: [
-              "Right after the client brief, the project started with a research on similar existing products and an in-depth analysis of both the aspect related to the user experience provided and the technologies employed.",
+              "Right after the client brief, the project started with a research on similar existing products and an in-depth analysis of the user experience provided and the technologies employed.",
             ],
             contents: [
               {
@@ -631,7 +632,7 @@ const ProjectData = {
             headline:
               "Defining the main goals and features of the product, based on the client's creative direction",
             paragraph: [
-              "after listening to the client's vision for its products and the artistic direction behind the brand communication, we defined together the main objectives of the project I was in charge of and how it fits into the business strategy.",
+              "After listening to the client's vision for her products and the artistic direction behind the brand communication, we defined together the main objectives of the project and how it fits into the business strategy.",
             ],
             contents: [
               {
@@ -643,31 +644,31 @@ const ProjectData = {
                         {
                           heading: (
                             <>
-                              highlighting <br /> the unique materials <br /> of
-                              paola mirai jewelry
+                              Highlighting <br /> the unique materials <br /> of
+                              Paola Mirai jewelry
                             </>
                           ),
-                          text: "Use 3d models to convey the modernity of the brand and show a faithful reproduction of the unique, self-made materials employed.",
+                          text: "Using 3D models to convey the modernity of the brand and show a faithful reproduction of the unique, self-made materials employed.",
                           image: "/concept/icon0.svg",
                         },
                         {
                           heading: (
                             <>
-                              Discovering <br /> the different <br /> jewels
-                              collections
+                              Virtual showcase <br /> of the different <br />{" "}
+                              jewel collections
                             </>
                           ),
-                          text: "Highlight the uniqueness and creativity behind each collection of jewels.",
+                          text: "Allow users to browse the catalogue of products to discover the uniqueness and creativity behind each collection.",
                           image: "/concept/icon1.svg",
                         },
                         {
                           heading: (
                             <>
-                              Experiencing <br /> an innovative way <br /> of
-                              trying on products
+                              Providing <br /> a futuristic way <br /> of trying
+                              on products
                             </>
                           ),
-                          text: "Leveraging augmented reality to show how the materials interact with the customer's skin and provide a futuristic experience.",
+                          text: "Leveraging augmented reality to show how the materials interact with the customer's skin and provide an innovative experience.",
                           image: "/concept/icon2.svg",
                         },
                       ]}
@@ -808,7 +809,7 @@ const ProjectData = {
       </>
     ),
     info: [
-      { label: "time frame", text: "January 2020 ― July 2020" },
+      { label: "time frame", text: "February 2020 ― July 2020" },
       { label: "type of project", text: "University group project" },
       {
         label: "My role",
@@ -822,7 +823,7 @@ const ProjectData = {
     ],
     overview: {
       headline:
-        "Digital concerts made interactive and engaging social experiences that are worth to pay for",
+        "Digital concerts made interactive and engaging social experiences which are worth to pay for",
       paragraph: [
         "Zest is a university project that I've developed together with my team during the Interaction Design course at Politecnico di Milano. The main theme of the course was to design a service that would help people cope with the effects of the first major quarantine caused by the COVID pandemic",
         "My team decided to focus on the music industry, which was economically devastated due to the restrictions and subsequent cancellations of the main source of income for artists: live events.",

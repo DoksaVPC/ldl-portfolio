@@ -4,7 +4,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 6.4rem;
   background-color: rgba(white, 0);
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0);
   transition: 0.2s;
@@ -16,6 +16,10 @@
     box-shadow: 0rem 0.2rem 1.6rem rgba(0, 0, 0, 0.1);
   }
 
+  @include respond(tab-land) {
+    padding: 1.6rem 3.2rem;
+  }
+
   @include respond(phone) {
     padding: 1.6rem 2rem;
   }
@@ -23,9 +27,11 @@
   &__logo-box {
     width: 4rem;
     height: 4rem;
+    background-color: $color-accent;
 
     @include respond(phone) {
       width: 6rem;
+      height: 6rem;
     }
   }
 
@@ -39,21 +45,21 @@
     &::after {
       display: block;
       content: "";
-      height: 2px;
+      height: 1px;
       width: 16px;
       background-color: $color-accent;
       position: absolute;
       left: 50%;
       transform: translateX(-50%) scaleX(0);
       bottom: -0.4rem;
-      transition: transform 0.2s;
+      transition: transform 0.15s;
     }
 
     &:hover {
       &::after {
         display: block;
         content: "";
-        height: 2px;
+        height: 1px;
         width: 16px;
         background-color: $color-accent;
         position: absolute;
@@ -68,7 +74,7 @@
       &::after {
         display: block;
         content: "";
-        height: 2px;
+        height: 1px;
         width: unset;
         background-color: $color-accent;
         position: absolute;

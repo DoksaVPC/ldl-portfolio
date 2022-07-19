@@ -26,13 +26,15 @@ function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__logo-box">
-        <img
-          src={Logo}
-          alt="Lorenzo Di Leonardo logo"
-          className="navbar__logo"
-        />
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Lorenzo Di Leonardo logo"
+            className="navbar__logo"
+          />
+        </Link>
       </div>
-      <ul className="navbar__list u_show-on-desktop">
+      <ul className="navbar__list">
         <li
           className={`navbar__list-item ${
             location.pathname === "/" ? "navbar__list-item--active" : ""

@@ -1,6 +1,5 @@
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState } from "react";
 import ToggleButton from "../shared/ToggleButton";
-import WireframeScreen from "./WireframeScreen";
 
 function Wireframe({ projectName }) {
   const [isMobile, setIsMobile] = useState(false);

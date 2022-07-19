@@ -14,12 +14,11 @@ function Header() {
                 <span className="heading-primary__main--top">
                   UX/UI designer
                 </span>
-                <span className="heading-primary__main--center u_show-on-tab">
+                {/* <span className="heading-primary__main--center u_show-on-tab">
                   &amp;
-                </span>
+                </span> */}
                 <span className="heading-primary__main--bottom">
-                  <span className="u_hide-on-tab--inline">&amp;</span> creative
-                  developer
+                  &amp; creative developer
                 </span>
               </span>
             </h1>
@@ -48,7 +47,8 @@ function Header() {
               </p>
               <Link to="/about">
                 <span className="button button--link button--primary u_margin-top-l">
-                  More about me &rarr;
+                  More about me{" "}
+                  <div className="arrow arrow--inline arrow--horizontal arrow--light"></div>
                 </span>
               </Link>
             </div>

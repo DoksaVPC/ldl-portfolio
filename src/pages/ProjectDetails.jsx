@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import Hero from "../components/details/Hero";
 import Carousel from "../components/shared/Carousel";
@@ -8,6 +8,7 @@ import ProjectData from "../components/home/ProjectsData";
 
 function ProjectDetails() {
   const params = useParams();
+  const navigate = useNavigate();
 
   const {
     name,
@@ -261,9 +262,14 @@ function ProjectDetails() {
         ))}
       </div>
       <div className="details__link-container">
-        <Link to="/" className="details__link">
-          &larr; Back to projects
-        </Link>
+        <div
+          className="details__link"
+          onClick={() => {
+            navigate(-1);
+          }}>
+          <div className="arrow arrow--inline arrow--horizontal arrow--horizontal--flipped"></div>{" "}
+          Back to projects
+        </div>
       </div>
 
       {/* <section className="details__conclusions">

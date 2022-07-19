@@ -1,10 +1,36 @@
 .about {
   padding: 12rem 0;
 
+  &__support-content {
+    position: relative;
+    align-self: flex-start;
+    @include column(4);
+    opacity: 0;
+    animation: moveInRight 1s cubic-bezier(0.2, 0, 0.03, 1) forwards;
+    z-index: -1;
+
+    .header__circle {
+      animation: none;
+      opacity: 0.4;
+
+      &--first {
+        transform: translate(-50%, -50%) scale(0.4);
+      }
+
+      &--second {
+        transform: translate(-50%, -50%) scale(0.6);
+      }
+
+      &--third {
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+    }
+  }
+
   &__photo-box {
     width: 100%;
     padding-bottom: 100%;
-    background-color: $color-primary;
+    background-color: $color-accent-light;
     position: relative;
     overflow: hidden;
     border-radius: 100%;
@@ -19,6 +45,8 @@
     align-items: flex-start;
     font-size: 2.2rem;
     gap: unset;
+    opacity: 0;
+    animation: moveInRight 1s 0.05s cubic-bezier(0.2, 0, 0.03, 1) forwards;
   }
 
   .details__support-content {

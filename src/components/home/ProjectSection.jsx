@@ -5,7 +5,8 @@ function ProjectSection() {
     <section className="section-projects">
       <div className="container">
         <h2 className="heading-secondary heading-secondary--bold heading-secondary--arrow u_margin-bottom-xxl">
-          Featured projects <div className="arrow arrow--inline"></div>
+          Featured projects{" "}
+          <div className="arrow arrow--inline u_hide-on-tab"></div>
         </h2>
         <ProjectsList />
         {/* <h2 className="heading-secondary heading-secondary--bold heading-secondary--arrow u_margin-bottom-xxl">

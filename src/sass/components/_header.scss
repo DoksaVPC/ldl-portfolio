@@ -9,6 +9,7 @@
   &__container {
     position: relative;
     z-index: 2;
+    overflow: hidden;
   }
 
   &__circle {
@@ -24,6 +25,11 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     animation: waves 3s cubic-bezier(0, 0, 0.16, 0.99);
+
+    @include respond(tab-port) {
+      width: 100vh;
+      height: 100vh;
+    }
 
     &--first {
       animation-delay: 0.4s;
