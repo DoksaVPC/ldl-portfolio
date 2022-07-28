@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.0700d254.css",
-    "main.js": "/static/js/main.472b7705.js",
+    "main.css": "/static/css/main.dbf53e0f.css",
+    "main.js": "/static/js/main.4d065c2a.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
+    "static/media/stanwars.mp4": "/static/media/stanwars.a109e17d3e83f47bc447.mp4",
     "static/media/cover.webp": "/static/media/cover.ebf587d76f6d4e632aa0.webp",
     "static/media/zest.webp": "/static/media/zest.5c20ed8b15bc392bf552.webp",
     "static/media/stan-wars.png": "/static/media/stan-wars.98053f1d60ff4ffa3360.png",
@@ -14,12 +15,12 @@
     "static/media/ldl-logo.svg": "/static/media/ldl-logo.52f04a95ba0d9cf3f4ce3e95f173754a.svg",
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
-    "main.0700d254.css.map": "/static/css/main.0700d254.css.map",
-    "main.472b7705.js.map": "/static/js/main.472b7705.js.map",
+    "main.dbf53e0f.css.map": "/static/css/main.dbf53e0f.css.map",
+    "main.4d065c2a.js.map": "/static/js/main.4d065c2a.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0700d254.css",
-    "static/js/main.472b7705.js"
+    "static/css/main.dbf53e0f.css",
+    "static/js/main.4d065c2a.js"
   ]
 }
