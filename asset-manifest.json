@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dbf53e0f.css",
-    "main.js": "/static/js/main.4d065c2a.js",
+    "main.js": "/static/js/main.ccfbb043.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
     "static/media/stanwars.mp4": "/static/media/stanwars.a109e17d3e83f47bc447.mp4",
@@ -16,11 +16,11 @@
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
     "main.dbf53e0f.css.map": "/static/css/main.dbf53e0f.css.map",
-    "main.4d065c2a.js.map": "/static/js/main.4d065c2a.js.map",
+    "main.ccfbb043.js.map": "/static/js/main.ccfbb043.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dbf53e0f.css",
-    "static/js/main.4d065c2a.js"
+    "static/js/main.ccfbb043.js"
   ]
 }
