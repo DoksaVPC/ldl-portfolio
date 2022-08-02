@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.dea05f02.css",
-    "main.js": "/static/js/main.ccfbb043.js",
+    "main.css": "/static/css/main.c3d02a65.css",
+    "main.js": "/static/js/main.5d18f360.js",
     "static/js/787.0cc12d50.chunk.js": "/static/js/787.0cc12d50.chunk.js",
     "static/media/play-of-shadows.png": "/static/media/play-of-shadows.ca6216ed8fbd70fd457e.png",
     "static/media/stanwars.mp4": "/static/media/stanwars.a109e17d3e83f47bc447.mp4",
     "static/media/cover.webp": "/static/media/cover.ebf587d76f6d4e632aa0.webp",
-    "static/media/zest.webp": "/static/media/zest.5c20ed8b15bc392bf552.webp",
+    "static/media/zest.webp": "/static/media/zest.e879b29be3ac38a05c63.webp",
     "static/media/stan-wars.png": "/static/media/stan-wars.98053f1d60ff4ffa3360.png",
-    "static/media/picture.webp": "/static/media/picture.9cc552b5356885e0a630.webp",
     "static/media/paolamirai.webp": "/static/media/paolamirai.2cfe9f76d0e987196257.webp",
+    "static/media/picture.webp": "/static/media/picture.1d4407a24110044ffefb.webp",
     "index.html": "/index.html",
+    "static/media/phone.svg": "/static/media/phone.b72a0fa84284206a33cd49b5ceb00a27.svg",
+    "static/media/email.svg": "/static/media/email.faebe2fc595970dd0e0acd7db3989048.svg",
     "static/media/pros.svg": "/static/media/pros.1c9ad9ff3cf3d727af7e92b37d77f982.svg",
     "static/media/ldl-logo.svg": "/static/media/ldl-logo.52f04a95ba0d9cf3f4ce3e95f173754a.svg",
     "static/media/cons.svg": "/static/media/cons.e3299757c8bfa4524caabc944f00693d.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.20edf4a94eb01755ffbcf944da0d6199.svg",
-    "main.dea05f02.css.map": "/static/css/main.dea05f02.css.map",
-    "main.ccfbb043.js.map": "/static/js/main.ccfbb043.js.map",
+    "main.c3d02a65.css.map": "/static/css/main.c3d02a65.css.map",
+    "main.5d18f360.js.map": "/static/js/main.5d18f360.js.map",
     "787.0cc12d50.chunk.js.map": "/static/js/787.0cc12d50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dea05f02.css",
-    "static/js/main.ccfbb043.js"
+    "static/css/main.c3d02a65.css",
+    "static/js/main.5d18f360.js"
   ]
 }
